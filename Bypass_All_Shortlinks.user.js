@@ -2473,7 +2473,7 @@
                   usenetAd[i].parentNode.remove();
                   i=usenetAd.length;
                 }
-              }  
+              }
               if(document.location.href.includes("/Link/")){
                 getSingleLink();
               }
@@ -2584,7 +2584,7 @@
                       for (const mutation of mutationList) {
                           console.log(mutation);
                           mutation.target.removeAttribute(mutation.attributeName);
-                          
+
                       }
                   };
                   const observer = new MutationObserver(callback);
