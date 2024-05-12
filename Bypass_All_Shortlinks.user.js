@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version        91.9.13
+// @version        91.9.14
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -647,9 +647,11 @@
 // @include      /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
 // @include      /adbypass.eu/
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
+// @include     /(mundopolo.net|b.myfirstdollar.net)/
 // @include     /(mundopolo.net|d.myfirstdollar.net)/
 // @include     /acorta2.com/
 // @include     /(web.admoneyclick.net|acortaphd.live)\/#!/
+// @include     /(web.admoneyclick.net|adsense.tupaste.top)\/#!/
 // @include     /onlypc.net\/out#!/
 // @include     /comohoy.com/
 // @include     /sphinxanime.com\/short/
@@ -1905,8 +1907,14 @@
         Object.defineProperty(document, 'visibilityState', {get() {return 'visible';}}); window.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true);
         window.addEventListener('focus', onfocus, true);document.addEventListener('visibilitychange', function(e) {e.stopImmediatePropagation();}, true, true); Object.defineProperty(document, 'hidden', {get() {return false;}});};
 
-    //peliculasgd.net, animesgd.net
+    // animesgd.net
     /(mundopolo.net|d.myfirstdollar.net)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    // club-hd.com
+    /(web.admoneyclick.net|adsense.tupaste.top)\/#!/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
+
+    //peliculasgd.net
+    /(mundopolo.net|b.myfirstdollar.net)/.test(url) ? redirect(decodeURIComponent(atob(atob(atob(url.split('#!')[1]))))) : null;
 
     // librolandia.net
     /acorta2.com/.test(url) ? redirect(atob(atob(atob(url.split('#!')[1])))) : null;
@@ -2702,7 +2710,7 @@
 // ----- ----- -----
 
 // ----- Bypass mega-enlace ( Taken from AdGuard https://github.com/AdguardTeam/AdguardFilters/blob/b1622e8b387148509ca355e8070ffa5cdcf87525/SpanishFilter/sections/general_extensions.txt#L108 / https://github.com/AdguardTeam/AdguardFilters/issues/174863#issuecomment-1996735239) -----
-// used in: pelisenhd.org latinomegahd.net gatonplayseries.com peliculasgd.net tododvdfull.com cinemaniahdd.net programasvirtualespc.net compucalitv.pro
+// used in: pelisenhd.org latinomegahd.net gatonplayseries.com peliculasgd.net tododvdfull.com cinemaniahdd.net programasvirtualespc.net compucalitv.pro gdr
 (function() {
     if (/mega-enlace.com/.test(window.location.href)) {
         const window = unsafeWindow; //Added so it works in ViolentMonkey instead of AdGuard
