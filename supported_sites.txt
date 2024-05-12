@@ -1,4 +1,4 @@
-earnify.pro
+    earnify.pro
 aprovax.com
 lootcash.vip
 mixrootmods.com
@@ -780,3 +780,4 @@ https://paster.so/*
 /(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /mega-enlace.com/
 /(work.ink|workink.click)\/.*$/
+/club-hd.com
