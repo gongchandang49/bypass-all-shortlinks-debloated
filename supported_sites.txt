@@ -29,7 +29,7 @@ adbtc.top
 upload.ee
 appdrive\.*
 dddrive.me
-uppit.com
+uppit.com   
 krakenfiles.com
 gofile.io
 karanpc.com
@@ -734,6 +734,7 @@ https://paster.so/*
 /tii.la|oko.sh|shrinke.me|clk.wiki|techy.veganab.co|atglinks.com|linx.cc|get.megaurl.in|wordcounter.icu|exeo.app|pwrpa.cc|(go|get).megafly.in|birdurls.com|blog.graphicuv.com|try2link.com|owllink.net/
 /ez4short.com\/[^\/]+\/\?token=[^\/]+$/
 /shon.xyz/
+/gdrivelatino.net
 /veganab.co\/\?link=/
 /veganab.co/
 /camdigest.com/
