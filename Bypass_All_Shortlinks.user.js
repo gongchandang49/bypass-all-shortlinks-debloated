@@ -644,7 +644,7 @@
 // @grant        GM.xmlHttpRequest
 // @grant          GM_getResourceText
 // @match        https://paster.so/*
-// @include      /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/
+// @include      /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu|megaspremium).com)\/s\?/
 // @include      /adbypass.eu/
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /(mundopolo.net|myfirstdollar.net)/
@@ -684,7 +684,7 @@
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/
 // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
-// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/
+// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu|megaspremium).com)\/s\?/
 // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /epicload.com\/files/
 // @include     /www.gtaall.com\/get-manual/
@@ -1827,7 +1827,7 @@
     'use strict';
     if (true) {
         var url = window.location.href;
-        if (/((ebaticalfel|megadropsz|stownrusis|iedprivatedqu).com)\/s\?/.test(url)) {
+        if (/((ebaticalfel|megadropsz|stownrusis|iedprivatedqu|megaspremium).com)\/s\?/.test(url)) {
             GM_setValue('savedShortlink', url);
             window.location.assign('https://adbypass.eu/');
         } else if (/adbypass.eu/.test(url) && !url.includes('/unblock')) {
@@ -2118,10 +2118,10 @@
     // /bstlar.com/.test(url) ? solveThroughBypassCity(url) : null;
 
     // Ad-maven (optionally solve through bypass.city, but currently solved through adbypass.eu)
-    // /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
+    /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu|megaspremium).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
 
     // empebau.eu used by adbypass.eu
-    /empebau.eu\/s/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#skip > p:nth-child(1) > a:nth-child(1)')}) : null;
+    // /empebau.eu\/s/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#skip > p:nth-child(1) > a:nth-child(1)')}) : null;
 
     // Loot-links (optionally solve through bypass.city, but currently solved locally)
     // /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/.test(url) ? solveThroughBypassCity(url) : null;
