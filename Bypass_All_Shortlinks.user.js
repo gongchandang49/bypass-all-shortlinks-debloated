@@ -1825,7 +1825,7 @@
 // ----- Bypass ad-maven with adbypass.eu -----
 (function() {
     'use strict';
-    if (true) {
+    if (false) {
         var url = window.location.href;
         if (/((ebaticalfel|megadropsz|stownrusis|iedprivatedqu|megaspremium|premiumstashdrop|teenspremium).com)\/s\?/.test(url)) {
             GM_setValue('savedShortlink', url);
