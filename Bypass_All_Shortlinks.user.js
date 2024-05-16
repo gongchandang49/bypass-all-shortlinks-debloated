@@ -644,7 +644,7 @@
 // @grant        GM.xmlHttpRequest
 // @grant          GM_getResourceText
 // @match        https://paster.so/*
-// @include      /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu|megaspremium|teenspremium).com)\/s\?/
+// @include      /^(https?:\/\/)((ebaticalfel|megadropsz|stownrusis|iedprivatedqu|megaspremium|premiumstashdrop|teenspremium).com)\/s\?/
 // @include      /adbypass.eu/
 // @include      /(bypass.city|adbypass.org)\/bypass\?bypass=/
 // @include     /(mundopolo.net|myfirstdollar.net)/
@@ -1827,7 +1827,7 @@
     'use strict';
     if (true) {
         var url = window.location.href;
-        if (/((ebaticalfel|megadropsz|stownrusis|iedprivatedqu|megaspremium|teenspremium).com)\/s\?/.test(url)) {
+        if (/((ebaticalfel|megadropsz|stownrusis|iedprivatedqu|megaspremium|premiumstashdrop|teenspremium).com)\/s\?/.test(url)) {
             GM_setValue('savedShortlink', url);
             window.location.assign('https://adbypass.eu/');
         } else if (/adbypass.eu/.test(url) && !url.includes('/unblock')) {
@@ -2118,7 +2118,7 @@
     // /bstlar.com/.test(url) ? solveThroughBypassCity(url) : null;
 
     // Ad-maven (optionally solve through bypass.city, but currently solved through adbypass.eu)
-    /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu|megaspremium|teenspremium).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
+    /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu|megaspremium|premiumstashdrop|teenspremium).com)\/s\?/.test(url) ? solveThroughBypassCity(url) : null;
 
     // empebau.eu used by adbypass.eu
     /empebau.eu\/s/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#skip > p:nth-child(1) > a:nth-child(1)')}) : null;
