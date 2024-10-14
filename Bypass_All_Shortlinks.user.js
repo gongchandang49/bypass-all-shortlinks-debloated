@@ -735,7 +735,7 @@
 // @include      /filecrypt.(cc|co)/
 // @include      /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
 // @include     /(mega-enlace|acortados).com/
-// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv).com|(makego|sakazi).net|askerlikforum.com.tr)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv).com|(makego|sakazi).net|askerlikforum.com.tr|(pulse3d|1side|vibe21).xyz)(\/.*)/
 // @include     /(work.ink|workink.click)\/.*$/
 // @resource    NOTYF_CSS https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css
 // @require     https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js
@@ -2805,7 +2805,7 @@
 (function() {
     "use strict";
 
-    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv).com|(makego|sakazi).net|askerlikforum.com.tr/
+    const domainRegex = /(actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv).com|(makego|sakazi).net|askerlikforum.com.tr|(pulse3d|1side|vibe21).xyz/
     if (domainRegex.test(window.location.href)) {
 
         // Backup the current Rinku.me Code in case we get to 404 and we need to try again
