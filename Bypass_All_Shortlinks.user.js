@@ -2803,14 +2803,15 @@
                   var obj=JSON.parse(response.response);
                   //console.log(obj);
                   var finalLinksDiv=document.createElement("DIV");
-                  finalLinksDiv.style.backgroundColor="white";
+                  finalLinksDiv.style.backgroundColor="rgba(0, 0, 0, 0.5)";
                   finalLinksDiv.style.borderRadius="10px";
                   finalLinksDiv.style.padding="1em";
                   finalLinksDiv.style.marginTop="1em";
-                  finalLinksDiv.style.color="black";
+                  finalLinksDiv.style.color="#4FCA1B";
                   finalLinksDiv.style.zIndex="10";
                   finalLinksDiv.style.position="relative";
                   finalLinksDiv.style.marginBottom="1em";
+                  finalLinksDiv.style.display = "inline-block";
                   let a=document.createElement("SPAN");
                   a.textContent="Decrypted links:";
                   finalLinksDiv.appendChild(a);
