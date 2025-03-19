@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        mega-enlace bypass
-// @include     /(mega-enlace|acortados).com|tulink.org/
+// @include     /^(https?:\/\/)(.+)?((mega-enlace|acortados).com|tulink.org)/
 // @grant          GM_xmlhttpRequest
 // @run-at      document-start
 // ==/UserScript==
