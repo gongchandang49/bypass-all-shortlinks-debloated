@@ -1303,7 +1303,7 @@
     // /(techyblogs.in|readytechflip.com)(?!.*(safe\.php\?link=|&__cf_chl_tk=))/.test(url) ? afterWindowLoaded(function() {clickIfNotDisabled('#tp-snp2')}) : null;
 
     // stfly - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/62
-    if (/stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/.test(url)) {
+    /* if (/stfly.(cc|xyz|biz|me)|stly.link|(techtrendmakers|gadnest|optimizepics|bookbucketlyst).com|(blogbux|blogesque|exploreera|explorosity|trekcheck|torovalley|travize|metoza|techlike|crenue|atravan|transoa|techmize|snaplessons|airevue).net/.test(url)) {
         preventForcedFocusOnWindow();
         
         function clickAllValidButtons() {
@@ -1366,7 +1366,7 @@
 
         window.addEventListener('load', function() {clickAllValidButtons();}); //Click all the valid buttons when the page loads
         setInterval(function() {clickAllValidButtons();}, 2000); //Click all the valid buttons every 2 seconds
-    }
+    } */
 
     // zipshort.net - https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-9971779
     /ontechhindi.com/.test(url) ? afterDOMLoaded(function() {
