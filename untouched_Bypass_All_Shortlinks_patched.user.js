@@ -37,7 +37,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version    96.0.2
+// @version    96.0.3
 // @match      *://*/*
 // @grant      GM_setValue
 // @grant      GM_getValue
@@ -441,8 +441,6 @@
       if (elementExists('#download')) {DoIfExists('.btn-prio.btn', 2);}});
     BypassedByBloggerPemula(/mp4upload.com/, () => {
       DoIfExists('#todl', 2);DoIfExists("form[name='F1']", 'submit', 1);});
-    BypassedByBloggerPemula(/hxfile.co|ex-load.com|megadb.net/, () => {
-      DoIfExists('.btn-dow.btn', 2);DoIfExists("form[name='F1']", 'submit', 1);});
     BypassedByBloggerPemula(/coincroco.com|surflink.tech|cointox.net/, () => {
       waitForElm('.mb-sm-0.mt-3.btnBgRed', ccBtn => ccBtn.click());});
     BypassedByBloggerPemula(/solidcoins.net|fishingbreeze.com/, () => {

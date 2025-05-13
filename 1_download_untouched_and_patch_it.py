@@ -183,6 +183,11 @@ def modify_file_with_my_fixes(input_file, output_file):
     content = content.replace("ai.tempatwisata.pro",
                               "(ai|go).tempatwisata.pro")
 
+    linestoremove = """    BypassedByBloggerPemula(/hxfile.co|ex-load.com|megadb.net/, () => {
+      DoIfExists('.btn-dow.btn', 2);DoIfExists("form[name='F1']", 'submit', 1);});
+"""
+    content = content.replace(linestoremove, "")
+
     if not content.endswith("\n"):
         content += "\n"
 
