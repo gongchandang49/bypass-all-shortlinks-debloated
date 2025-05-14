@@ -134,8 +134,6 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("/(playonpc|yolasblog).online|quins.us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday).com|gally.shop|freeat30.org|ivnlnews.xyz/", "/(playonpc|yolasblog|playarcade).online|(quins|megahosting).us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday|tradeshowrating).com|gally.shop|evegor.net|freeat30.org|(qanin|ivnlnews).xyz/")
 
-    content = content.replace("BypassedByBloggerPemula(/dropgalaxy", "//BypassedByBloggerPemula(/dropgalaxy")
-
     linestoremove = """    BypassedByBloggerPemula(/drop.download/, function() {
       DoIfExists('#method_free', 2);DoIfExists('.btn-download', 2);});
 """
@@ -157,11 +155,6 @@ def modify_file_with_my_fixes(input_file, output_file):
     content = content.replace(linestoremove, "")
 
     content = content.replace("BypassedByBloggerPemula(/financemonk.net", "//BypassedByBloggerPemula(/financemonk.net")
-    content = content.replace("BypassedByBloggerPemula(/buzzheavier.com", "//BypassedByBloggerPemula(/buzzheavier.com")
-    content = content.replace("BypassedByBloggerPemula(/gofile.io", "//BypassedByBloggerPemula(/gofile.io")
-    content = content.replace("BypassedByBloggerPemula(/rapidgator.net", "//BypassedByBloggerPemula(/rapidgator.net")
-    content = content.replace("BypassedByBloggerPemula(/karanpc.com", "//BypassedByBloggerPemula(/karanpc.com")
-    content = content.replace("BypassedByBloggerPemula(/udrop.com", "//BypassedByBloggerPemula(/udrop.com")
 
     linestoremove = """    BypassedByBloggerPemula(/hxfile.co|ex-load.com|megadb.net/, function() {
       DoIfExists('.btn-dow.btn', 2);DoIfExists("form[name='F1']", 'submit', 1);});
@@ -187,6 +180,8 @@ def modify_file_with_my_fixes(input_file, output_file):
       DoIfExists('.btn-dow.btn', 2);DoIfExists("form[name='F1']", 'submit', 1);});
 """
     content = content.replace(linestoremove, "")
+
+    content = content.replace("/.*/, /upfion.com/", "/upfion.com/")
 
     if not content.endswith("\n"):
         content += "\n"
