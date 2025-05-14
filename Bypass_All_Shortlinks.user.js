@@ -283,10 +283,6 @@
 // @match *://*.bloggerpemula.pythonanywhere.com/*
 // @grant      GM_deleteValue
 // @match        https://acortalink.me/*
-// @match         *://bleleadersto.com/s?*
-// @match         *://tonordersitye.com/s?*
-// @match         *://daughablelea.com/s?*
-// @match         *://mdlinkshub.com/s?*
 // @match         *://linkvertise.com/*
 // @match        *://bstlar.com/*
 // @match        https://bypass.city/bypass?bypass=*
@@ -298,6 +294,7 @@
 // @match        https://paster.so/*
 // @match        https://psa.wf/goto/*
 // @match        https://moviezapiya.fun/
+// @include       /^https:\/\/((bleleadersto|tonordersitye|daughablelea|mdlinkshub).com)\/s\?(?!.*f933e7ff).*$/
 // @include       /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
 // @include     /comohoy.com/
@@ -330,7 +327,6 @@
 // @include     /www.itscybertech.com/
 // @include     /thegadgetking.in/
 // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(linkvertise.com|(linkvertise|link-to).net)/
-// @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(free-content.pro|(ebaticalfel|downbadleaks|megadropsz|megadumpz|stownrusis|iedprivatedqu|megaspremium|premiumstashdrop|teenspremium|utopianleaks|kmendation|eofmukindwo|realiukzemydre|daughablelea|tonordersitye|bleleadersto).com)|best-links.org\/s\?/
 // @include     /^(https?:\/\/)(?!(bypass.city|adbypass.org))(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 // @include     /epicload.com\/files/
 // @include     /www.gtaall.com\/get-manual/
@@ -1256,7 +1252,7 @@
 // ----- bypass.vip and bypass.city APIs------
 (function() {
     'use strict';
-    const admavenRegex = /^https:\/\/((bleleadersto|tonordersitye|daughablelea|mdlinkshub).com)\/s\?.*$/;
+    const admavenRegex = /^https:\/\/((bleleadersto|tonordersitye|daughablelea|mdlinkshub).com)\/s\?(?!.*f933e7ff).*$/;
     const linkvertiseRegex = /^https:\/\/linkvertise\.com\/.+$/;
     const lootlinkRegex = /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 
