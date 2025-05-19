@@ -3,8 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @noframes
-// @version    96.1.4
+// @version    96.1.5
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -18,6 +17,8 @@
 // @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
 // @homepageURL    https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated
 // @supportURL     https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues
+// @include /^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/
+// @match *://*/recaptcha/api2/*
 // @match *://*.gocmod.com/*
 // @match *://*.api.gplinks.com/*
 // @match *://*.rfaucet.com/*

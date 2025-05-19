@@ -26,12 +26,12 @@ def modify_script(input_script_path, includes_file_path, output_script_path):
     script_lines.insert(last_description_line_index + 1, includes_content)
 
     # Insert additional includes
-    # additional_includes = [
-    #     "// @include /^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/",
-    #     "// @match *://*/recaptcha/api2/*"
-    #     "\n",
-    # ]
-    # script_lines.insert(last_description_line_index + 1, '\n'.join(additional_includes))
+    additional_includes = [
+        "// @include /^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/",
+        "// @match *://*/recaptcha/api2/*"
+        "\n",
+    ]
+    script_lines.insert(last_description_line_index + 1, '\n'.join(additional_includes))
 
     # Write the modified script to the output file
     with open(output_script_path, 'w') as output_file:
@@ -103,7 +103,7 @@ def modify_script_extra(file_path):
 
             # Change some default settings
             content = content.replace("'Auto Download For Supported Sites',type: 'checkbox',default: false,", "'Auto Download For Supported Sites',type: 'checkbox',default: true,")
-            #content = content.replace("'Auto Solve Recaptcha Audio Mode',type: 'checkbox',default: false,", "'Auto Solve Recaptcha Audio Mode',type: 'checkbox',default: true,")
+            content = content.replace("'Auto Solve Recaptcha Audio Mode',type: 'checkbox',default: false,", "'Auto Solve Recaptcha Audio Mode',type: 'checkbox',default: true,")
 
             ##content = content.replace("case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname))", "case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && !location.href.includes('/token/') && !location.href.includes('?r=') && !location.href.includes('?ref='))")
             ##content = content.replace("adbypass.org/bypass?bypass=' + location.href.split('?')[0]", "adbypass.org/bypass?bypass=' + encodeURIComponent(location.href)")
@@ -130,8 +130,8 @@ def modify_script_extra(file_path):
             content = content.replace("// @connect    nocaptchaai.com\n", "")
 
             # Add "@noframes"
-            if not "@noframes" in content:
-                content = content.replace("\n// @version", "\n// @noframes\n// @version")
+            # if not "@noframes" in content:
+            #     content = content.replace("\n// @version", "\n// @noframes\n// @version")
 
             #Remove tracking
 
