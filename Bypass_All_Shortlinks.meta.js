@@ -3,7 +3,8 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version    96.1.5
+// @noframes
+// @version    96.1.6
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -240,7 +241,6 @@
 // @include /^(https?:\/\/)(.+)?((tmail|labgame).io|(gamezizo|fitdynamos).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(ify.ac|go.linkify.ru)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(up-load.io|downloadani.me)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(hxfile.co|ex-load.com|megadb.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|(offeergames|todogame).online|whatgame.xyz|gold-24.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((goodmorningimg|odiadance|newkhabar24|aiperceiver|kaomojihub).com|dvjobs.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn|ziggame|gamezigg).com|azmath.info|aztravels.net|handydecor.com.vn)(\/.*)/

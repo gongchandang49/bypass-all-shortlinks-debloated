@@ -3,7 +3,8 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version    96.1.5
+// @noframes
+// @version    96.1.6
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -240,7 +241,6 @@
 // @include /^(https?:\/\/)(.+)?((tmail|labgame).io|(gamezizo|fitdynamos).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(ify.ac|go.linkify.ru)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(up-load.io|downloadani.me)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(hxfile.co|ex-load.com|megadb.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|(offeergames|todogame).online|whatgame.xyz|gold-24.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((goodmorningimg|odiadance|newkhabar24|aiperceiver|kaomojihub).com|dvjobs.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn|ziggame|gamezigg).com|azmath.info|aztravels.net|handydecor.com.vn)(\/.*)/
@@ -1039,8 +1039,6 @@
       DoIfExists("input[name='method_free']", 2);DoIfExists('.btn-dow.btn', 1);CaptchaDone(() => {DoIfExists('#downloadbtn');});});
     BypassedByBloggerPemula(/hitfile.net/, () => {if (!cfg.get('AutoDL')) {BpNote('Auto Download Feature Not Yet Activated!');return;}
       CaptchaDone(() => {DoIfExists('#submit');});DoIfExists('.nopay-btn.btn-grey', 2);waitForElm('#popunder2', hfl2 => redirect(hfl2.href), 37);});
-    BypassedByBloggerPemula(/hxfile.co|ex-load.com|megadb.net/, () => {if (!cfg.get('AutoDL')) {BpNote('Auto Download Feature Not Yet Activated!');return;}
-      DoIfExists('.btn-dow.btn', 2);DoIfExists("form[name='F1']", 'submit', 1);});
     BypassedByBloggerPemula(/(forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|(offeergames|todogame).online|whatgame.xyz|gold-24.net/, () => {
       DoIfExists('.oto > a:nth-child(1)', 1); waitForElm('.oto > a', linkjust => redirect(linkjust.href, false));});
     BypassedByBloggerPemula(/m.flyad.vip/, () => {

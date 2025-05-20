@@ -157,7 +157,7 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     content = content.replace("BypassedByBloggerPemula(/financemonk.net", "//BypassedByBloggerPemula(/financemonk.net")
 
-    linestoremove = """    BypassedByBloggerPemula(/hxfile.co|ex-load.com|megadb.net/, function() {
+    linestoremove = """    BypassedByBloggerPemula(/hxfile.co|ex-load.com|megadb.net/, () => {if (!cfg.get('AutoDL')) {BpNote('Auto Download Feature Not Yet Activated!');return;}
       DoIfExists('.btn-dow.btn', 2);DoIfExists("form[name='F1']", 'submit', 1);});
 """
     content = content.replace(linestoremove, "")
