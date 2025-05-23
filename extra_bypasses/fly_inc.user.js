@@ -82,8 +82,7 @@
             }
         }
 
-        // Wait for page to be fully loaded
-        window.addEventListener('load', function() {
+        function main() {
 
             // Override the hasFocus function
             document.hasFocus = function() {
@@ -174,8 +173,14 @@
                 interstitial.style.display = "none";
             }
 
-        });
+        };
 
+        // Wait for page to be fully loaded
+        if (document.readyState === "complete" || document.readyState === "interactive") {
+            main();
+        } else {
+            window.addEventListener("DOMContentLoaded", main);
+        }
     }
 })();
 // ----- End Bypass Rinku -----
