@@ -195,6 +195,8 @@ def modify_file_with_my_fixes(input_file, output_file):
 
     ##content = content.replace("/www.google.com|recaptcha.net/", "/^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/")
 
+    content = content.replace("(aduzz|tutorialsaya|baristakesehatan|merekrut).com", "(aduzz|tutorialsaya|baristakesehatan|merekrut|indobo).com")
+
     if not content.endswith("\n"):
         content += "\n"
 

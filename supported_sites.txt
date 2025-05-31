@@ -206,7 +206,7 @@ wp.thunder-appz.eu.org|blog.adscryp.com
 (fourlinez|newsonnline|phonesparrow|creditcarred|stockmarg).com|(alljntuworld|updatewallah|vyaapaarguru|viralmp3.com|sarkarins).in
 (financenube|mixrootmods|pastescript|trimorspacks).com
 (keedabankingnews|aceforce2apk).com|themezon.net|healthvainsure.site|rokni.xyz|bloggingwow.store|dsmusic.in|vi-music.app
-(aduzz|tutorialsaya|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info
+(aduzz|tutorialsaya|baristakesehatan|merekrut|indobo).com|deltabtc.xyz|bit4me.info
 yoshare.net|olhonagrana.com
 coincroco.com|surflink.tech|cointox.net
 solidcoins.net|fishingbreeze.com
@@ -532,6 +532,7 @@ https://moviezapiya.fun/
 /kaomojihub.com/
 /vplink.in/
 /^https:\/\/devuploads\.com\/.*/
+/link.paid4link.com/
 /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde|infoguidebd|worthtester|4kphotoediting|befinja).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup|muskokay|zingif).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 /^(https?:\/\/)(.+)?((mega-enlace|acortados).com|tulink.org)/
 /^https:\/\/(.*\.|)(playonpc.online|(quins|megahosting).us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|ngebike).com|gally.shop|(qanin|ivnlnews|jobvox|gfcg).xyz|evegor.net|freeat30.org|droplink.co)\/.*/

@@ -252,6 +252,7 @@
 // @include     /kaomojihub.com/
 // @include     /vplink.in/
 // @include     /^https:\/\/devuploads\.com\/.*/
+// @include     /link.paid4link.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1550,7 +1551,9 @@
     }) : null;
 
     // go.paid4link.com last step - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/222
-    /link.paid4link.com/.test(url) ? afterDOMLoaded(function() { redirectIfExists('#get-link-button');}) : null;
+    /link.paid4link.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfRecaptchaSolved('#invisibleCaptchaShortlink');
+    }) : null;
 
     // adsafelink / link2unlock - https://github.com/realodix/AdBlockID/issues/1874
     /app.link2unlock.com/.test(url) ? afterDOMLoaded(function() { 

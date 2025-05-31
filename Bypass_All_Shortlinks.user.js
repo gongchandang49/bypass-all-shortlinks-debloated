@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version    96.4
+// @version    96.4.1
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -228,7 +228,7 @@
 // @include /^(https?:\/\/)(.+)?((fourlinez|newsonnline|phonesparrow|creditcarred|stockmarg).com|(alljntuworld|updatewallah|vyaapaarguru|viralmp3.com|sarkarins).in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((financenube|mixrootmods|pastescript|trimorspacks).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((keedabankingnews|aceforce2apk).com|themezon.net|healthvainsure.site|rokni.xyz|bloggingwow.store|dsmusic.in|vi-music.app)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((aduzz|tutorialsaya|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((aduzz|tutorialsaya|baristakesehatan|merekrut|indobo).com|deltabtc.xyz|bit4me.info)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(yoshare.net|olhonagrana.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(coincroco.com|surflink.tech|cointox.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(solidcoins.net|fishingbreeze.com)(\/.*)/
@@ -555,6 +555,7 @@
 // @include     /kaomojihub.com/
 // @include     /vplink.in/
 // @include     /^https:\/\/devuploads\.com\/.*/
+// @include     /link.paid4link.com/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde|infoguidebd|worthtester|4kphotoediting|befinja).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup|muskokay|zingif).xyz|gamcabd.org|gamerking.shop)(\/.*)/
 // @include     /^(https?:\/\/)(.+)?((mega-enlace|acortados).com|tulink.org)/
 // @include     /^https:\/\/(.*\.|)(playonpc.online|(quins|megahosting).us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|ngebike).com|gally.shop|(qanin|ivnlnews|jobvox|gfcg).xyz|evegor.net|freeat30.org|droplink.co)\/.*/
@@ -866,7 +867,7 @@
     BypassedByBloggerPemula(/(financenube|mixrootmods|pastescript|trimorspacks).com/, () => {waitForElm('#wpsafe-link a', cdr => redirect(strBetween(cdr.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/(keedabankingnews|aceforce2apk).com|themezon.net|healthvainsure.site|rokni.xyz|bloggingwow.store|dsmusic.in|vi-music.app/, () => {DoIfExists("form[name='tp']", 'submit', 3);DoIfExists('#tp-snp2',4);});
     BypassedByBloggerPemula(/mboost.me/, () => {if (elementExists('#firstsection')){let mbo = bp('#__NEXT_DATA__');let mbm = JSON.parse(mbo.textContent).props.pageProps.data.targeturl;setTimeout(() => {redirect(mbm,false);}, 2 * 1000);}});
-    BypassedByBloggerPemula(/(aduzz|tutorialsaya|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `window.open('`, `', '_self')`), false));});
+    BypassedByBloggerPemula(/(aduzz|tutorialsaya|baristakesehatan|merekrut|indobo).com|deltabtc.xyz|bit4me.info/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/karyawan.co.id/, () => {
       DoIfExists('button#btn.bg-blue-100.text-blue-600', 3);});
     BypassedByBloggerPemula(/yoshare.net|olhonagrana.com/, () => {
@@ -2695,7 +2696,9 @@
     }) : null;
 
     // go.paid4link.com last step - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/222
-    /link.paid4link.com/.test(url) ? afterDOMLoaded(function() { redirectIfExists('#get-link-button');}) : null;
+    /link.paid4link.com/.test(url) ? afterDOMLoaded(function() {
+        clickIfRecaptchaSolved('#invisibleCaptchaShortlink');
+    }) : null;
 
     // adsafelink / link2unlock - https://github.com/realodix/AdBlockID/issues/1874
     /app.link2unlock.com/.test(url) ? afterDOMLoaded(function() { 
