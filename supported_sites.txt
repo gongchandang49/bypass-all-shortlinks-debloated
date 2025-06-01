@@ -359,8 +359,7 @@ https://moviezapiya.fun/
 /www.4fnet.org\/goto/
 /(linkmo.net|adpayl.ink)\/[^?]+\?data=.+$/
 /musicc.xyz/
-/(cravesandflames|codesnse|cloutgist).com/
-/go.(cravesandflames|codesnse|cloutgist).com/
+/(cravesandflames|codesnse|cloutgist|kecapku).com/
 /empebau.eu\/s/
 /cpmlink.net\/go/
 /10short.com/

@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version    96.4.2
+// @version    96.4.3
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -382,8 +382,7 @@
 // @include     /www.4fnet.org\/goto/
 // @include     /(linkmo.net|adpayl.ink)\/[^?]+\?data=.+$/
 // @include     /musicc.xyz/
-// @include     /(cravesandflames|codesnse|cloutgist).com/
-// @include     /go.(cravesandflames|codesnse|cloutgist).com/
+// @include     /(cravesandflames|codesnse|cloutgist|kecapku).com/
 // @include     /empebau.eu\/s/
 // @include     /cpmlink.net\/go/
 // @include     /10short.com/
@@ -2181,9 +2180,14 @@
     /musicc.xyz/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('.btn')}) : null;
 
     // zshort.net, shotzon.com - jnovels.com - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/5, https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/59
-    /cloutgist.com/.test(url) ? afterWindowLoaded(function() {clickIfCloudflareCaptchaSolved('.btn-captcha');}) : null;
-    /(cravesandflames|codesnse|cloutgist).com/.test(url) ? afterDOMLoaded(function() {clickIfExists('button.btn:nth-child(1)')}) : null;
-    /go.(cravesandflames|codesnse|cloutgist).com/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
+    /(cravesandflames|codesnse|cloutgist|kecapku).com/.test(url) ? afterDOMLoaded(function() {
+        if (!url.includes('go.')) {
+            //clickIfCloudflareCaptchaSolved('.btn-captcha');;
+            clickIfExists('button.btn:nth-child(1)');
+        } else if (url.includes('go.')) {
+            redirectIfNotDisabled('a.get-link');
+        }
+    }) : null;
 
     // olamovies.rent - https://v2links.me/q1z4ssolam //add stuff missing from the main script
     /v2links.(com|me)/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link')}) : null;
