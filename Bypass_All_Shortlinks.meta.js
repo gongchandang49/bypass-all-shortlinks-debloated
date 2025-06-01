@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version    96.4.1
+// @version    96.4.2
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -527,7 +527,7 @@
 // @include     /zaku.pro/
 // @include     /aylink.co|cpmlink.pro/
 // @include     /hypershort.com/
-// @include     /instaserve.net|gomob.xyz|gamechilly.online/
+// @include     /instaserve.net|gomob.xyz|gamechilly.online|instanders.app/
 // @include     /(desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link/
 // @include     /tech.hipsonyc.com|itijobalert.in/
 // @include     /golink.(gyanitheme.com|bloggerishyt.in)/
