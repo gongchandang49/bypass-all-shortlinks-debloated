@@ -281,8 +281,6 @@ https://datanodes.to/download
 *://www.ryuugames.com/?eroge=*
 *://anchoreth.com/r-adsh?t=i&v=*
 https://paster.so/*
-https://psa.wf/goto/*
-https://moviezapiya.fun/
 /^https:\/\/((bleleadersto|tonordersitye|daughablelea|mdlinkshub).com)\/s\?(?!.*f933e7ff).*$/
 /^(https?:\/\/)(loot-link.com|loot-links.com|lootlink.org|lootlinks.co|lootdest.(info|org|com)|links-loot.com|linksloot.net)\/s\?.*$/
 /(mundopolo.net|myfirstdollar.net|adsense.tupaste.top|acorta2.com|web.admoneyclick.net|acortaphd.live|onlypc.net|link.manudatos.com)/
