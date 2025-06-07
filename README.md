@@ -10,6 +10,15 @@ Save time with automation or bypasses for many link shorteners.
 
 *I test the script with Firefox + uBlock Origin + Violentmonkey, so that is the supported setup.*
 
+## How to patch the original script yourself
+Paste the content of the files [include_rules.txt](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/include_rules.txt) and [match_rules.txt](https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/src/branch/main/match_rules.txt) in the ViolentMonkey settings for the [original script](https://greasyfork.org/scripts/431691), like this:
+
+![](https://i.imgur.com/qiJekvg.jpeg)
+
+This would not include the extra bypasses into the original script. But at least this makes it run only on the necessary sites, instead of running on every site.
+
+*(I'm thinking about just publishing the extra bypasses, and letting people patch the script by Bloggerpemula themselves, with those match and include rules)*
+
 ## FAQ
 - **How effective is this?** It depends on each website. Sometimes it can bypass completely, sometimes it only accelerates the timers, other times it can only auto-click the buttons for you after waiting for the timers to run out. People who contribute here need to add new specific code for each website after we find the vulnerabilities.
 - **Why is this called "debloated" when now it's a bigger script than the original one?** It only loads for the websites that are supposed to be bypassed, instead of loading for every site, so your pages are less bloated. Also the redirection to `sl1bas.blogspot.com`, a tracking site, is revmoed.
