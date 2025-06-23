@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4
 // @noframes
-// @version    96.4.5
+// @version    96.4.6
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -2849,7 +2849,7 @@
     }) : null;
 
     // devuploads faster bypass using site from https://t.me/NickUpdates
-    /^https:\/\/devuploads\.com\/.*/.test(url) ? redirect('https://nick-ddl.downlaod.workers.dev/devuploads/' + url.split('devuploads.com/')[1]) : null;
+    // not working: /^https:\/\/devuploads\.com\/.*/.test(url) ? redirect('https://nick-ddl.downlaod.workers.dev/devuploads/' + url.split('devuploads.com/')[1]) : null;
 
     // devuploads
     function clickIfVisible5(selector) {

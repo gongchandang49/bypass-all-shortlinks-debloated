@@ -1707,7 +1707,7 @@
     }) : null;
 
     // devuploads faster bypass using site from https://t.me/NickUpdates
-    /^https:\/\/devuploads\.com\/.*/.test(url) ? redirect('https://nick-ddl.downlaod.workers.dev/devuploads/' + url.split('devuploads.com/')[1]) : null;
+    // not working: /^https:\/\/devuploads\.com\/.*/.test(url) ? redirect('https://nick-ddl.downlaod.workers.dev/devuploads/' + url.split('devuploads.com/')[1]) : null;
 
     // devuploads
     function clickIfVisible5(selector) {
