@@ -1,6 +1,6 @@
 ---
 name: "Request new site"
-about: "Choose this if you want to request support for a new site"
+about: "Choose this if you want to REQUEST support for a NEW SITE"
 title: "[NEWSITE] "
 labels: "New site"
 ---
