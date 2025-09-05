@@ -21,4 +21,4 @@ If you use or tried to use **uBlock Origin custom filters**, please mention them
 
 ____
 
-- [ ] I confirm I have tested this URL on a clean Chrome/Firefox window with no other extensions or VPN except Bypass All Shortlinks Debloated.
+- [ ] I confirm I have tested this URL on Firefox or Brave (with shields adblocking disabled), on a clean profile with no other extensions or VPN except Violentmonkey + Bypass All Shortlinks Debloated.
