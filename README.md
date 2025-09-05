@@ -12,15 +12,15 @@ A fork of *Bypass All Shortlinks* (originally by *bloggerpemula*), with some add
 
 ## Help make this better
 You can help by:
-- Reporting issues here on the [issues](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/issues) tab. **Post examples with the source link shortener and link source website.** I want to always know what type of content the shortlink leads to before putting time into it. NSFW is acceptable. I will only add/fix content-sharing shortlinks, **no faucet / crypto rewards**.
+- Reporting issues here on the [issues](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/issues) tab. **Post examples with the source link shortener and link source website.** I do not care what type of content the shortlink leads to. Fuck ethics.
 - Suggesting to merge other scripts into this one.
 - Editing/Adding code with pull requests.
-- If while using [uBlock Origin (recommended adblocker)](https://github.com/gorhill/uBlock?tab=readme-ov-file#ublock-origin-ubo), a link shortener is showing ads or detecting you have adblock, report it [here](https://github.com/uBlockOrigin/uAssets/discussions/27472).
+- If while using [uBlock Origin (recommended adblocker)](https://ublockorigin.com), a link shortener is showing ads or detecting you have adblock, report it [here](https://github.com/uBlockOrigin/uAssets/discussions/27472).
 
 ## FAQ
 - **How effective is this?** It depends on each website. Sometimes it can bypass completely, sometimes it only accelerates the timers, other times it can only auto-click the buttons for you after waiting for the timers to run out. People who contribute here need to add new specific code for each website after we find the vulnerabilities.
 - **Why is this called "debloated" when now it's a bigger script than the original one?** It only loads for the websites that are supposed to be bypassed, instead of loading for every site, so your pages are less bloated. Also the redirection to `sl1bas.blogspot.com`, a tracking site, is revmoed.
-- **What are *shortlinks*, where do I need this script if at all?** The type of *shortlinks* or *link shorteners* that we care about here are intermediate pages that users are forced to go through before getting to the page that we really want. They often force you to click ads so that the person posting these links can make a bit of money, 1 or 2 cents, each time somebody clicks them. This is used often in [p1r4cy websites that offer direct downloads](https://fmhy.net/downloadpiracyguide#video-sites).
+- **What are *shortlinks*, where do I need this script if at all?** The type of *shortlinks* or *link shorteners* that we care about here are intermediate pages that users are forced to go through before getting to the page that we really want. They often force you to click ads so that the person posting these links can make a bit of money, 1 or 2 cents, each time somebody clicks them. This is used often in [piracy websites that offer direct downloads](https://fmhy.net/downloadpiracyguide#video-sites).
 - **How do I use the settings menu this script has?** I would leave all those settings on default, some can break some sites. When I see that one of those is useful for a site, I enable it for that site (even if it doesn't show on the menu). That menu was added by bloggerpemula, the original dev, and I simply left it there, but I don't use it myself.
 
 ## How I modify the original userscript
@@ -37,7 +37,6 @@ Paste the content of the files [include_rules.txt](https://codeberg.org/gongchan
 
 This would not include the extra bypasses into the original script. But at least this makes it run only on the necessary sites, instead of running on every site.
 
-*(I'm thinking about just publishing the extra bypasses, and letting people patch the script by Bloggerpemula themselves, with those match and include rules)*
 
 ## Improvements in this fork
 - **Added more bypasses and some fixes** through the scripts in the [extra_bypasses](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses) directory.
