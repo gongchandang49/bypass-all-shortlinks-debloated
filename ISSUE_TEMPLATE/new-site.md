@@ -5,7 +5,7 @@ title: "[NEWSITE] "
 labels: "New site"
 ---
 
-**New site you want to add (domain only):""
+**New site you want to add (domain only):**
 
 
 ____
