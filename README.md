@@ -8,7 +8,9 @@ A fork of *Bypass All Shortlinks* (originally by *bloggerpemula*), with some add
 
 (you need a userscript manager like [Violentmonkey](https://violentmonkey.github.io/) installed in your web browser)
 
-*I test the script with Chrome/Firefox + uBlock Origin + Violentmonkey, so that is the supported setup.*
+*I test the script with Brave/Firefox + uBlock Origin + Violentmonkey, so that is the supported setup.*
+
+*Note for Chrome, Edge (or any similar MV3 browser) users: uBO Lite and uBlock Origin are NOT the same. Only Brave will work because it supports MV2. Disable Brave Shields adblocker for uBO to work.*
 
 ## Help make this better
 You can help by:
