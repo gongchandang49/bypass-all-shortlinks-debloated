@@ -1,7 +1,7 @@
 ---
 name: "Report broken site (previously added)"
 about: "Choose this if you want to REPORT a broken site that was ALREADY ADDED"
-title: "[BROKEN] "
+title: "[YOUR_BROKEN_SITE_HERE] "
 labels: "Broken"
 ---
 
