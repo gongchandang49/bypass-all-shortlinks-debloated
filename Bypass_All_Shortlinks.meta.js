@@ -40,6 +40,7 @@
 // @match *://*.ouo.io/*
 // @match *://*.adbtc.top/*
 // @match *://*.linkbox.to/*
+// @match *://*.modsfire.com/*
 // @match *://*.the2.link/*
 // @match *://*.keeplinks.org/*
 // @match *://*.forex-22.com/*
@@ -287,7 +288,6 @@
 // @include /^(https?:\/\/)(.+)?((cryptosparatodos|placementsmela|howtoconcepts|tuasy|skyrimer|yodharealty|mobcupring|aiimsopd|advupdates|camdigest|heygirlish|blog4nx|todayheadliners|jobqwe|cryptonews.faucetbin|mobileflashtools).com|(paidinsurance|djstar|sevayojana|bjp.org).in|(sastainsurance|nashib).xyz|(cialisstrong|loanforuniversity).online|(cegen|thunder-appz.eu).org|zaku.pro|veganab.co|skyfreecoins.top|manga4nx.site)(\/.*)/
 // @match *://*.go.paylinks.cloud/*
 // @match *://*.multiup.io/*
-// @match *://*.modsfire.com/*
 // @match *://*.social-unlock.com/*
 // @match *://*.gamezigg.com/*
 // @match *://*.shrs.link/*

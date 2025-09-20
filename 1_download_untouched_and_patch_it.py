@@ -204,6 +204,15 @@ def modify_file_with_my_fixes(input_file, output_file):
     content = content.replace("""BypassedByBloggerPemula(/tutwuri.id|(besargaji|link2unlock).com/, () => {ReadytoClick('#submit-button',2);ReadytoClick('#btn-2', 3);ReadytoClick('#verify > a ', 2);ReadytoClick('#verify > button ', 2);CaptchaDone(() => {DoIfExists('#btn-3');});});""",
                               """BypassedByBloggerPemula(/tutwuri.id|(besargaji|link2unlock).com/, () => {ReadytoClick('#submit-button',2);ReadytoClick('#btn-2', 3);ReadytoClick('#verify > a ', 2);ReadytoClick('#verify > a ', 2);ReadytoClick('#second_open_placeholder > a ', 2);ReadytoClick('#verify > a ', 2);ReadytoClick('a:innerText("Go to Link")', 2);});""")
 
+    # gongchandang49 - issues/3 - modsfire fix 2025-09-20
+    content = content.replace("""case 'modsfire.com': if (/^\\/([^\\/]+)/.test(h.pathname)) {return 'https://modsfire.com/d/' + RegExp.$1;} break;""", '')
+    content = content.replace("""const sl = (h => {switch (h.host)""",
+                              """BypassedByBloggerPemula(/modsfire.com/, () => { if (!location.pathname.startsWith('/download')) { alert("ONLY solve Cloudflare captcha and DO NOT click anything else!!!"); CaptchaDone(() => { modsfireDownload(); }); } else { modsfireDownload(); } });
+  function modsfireDownload() { DoIfExists('a.download-button', 3); waitForElm("a.download-button[href]", safe => { redirect(safe.href, false); DoIfExists("a[href*='/d/']", safe => { fetch(safe.href).then(response => { if (!response.ok) throw new Error('Network response was not ok'); return response.text(); }).then(data => {}).catch(error => {}); }); }); }
+
+  const sl = (h => {switch (h.host)""")
+
+
     if not content.endswith("\n"):
         content += "\n"
 

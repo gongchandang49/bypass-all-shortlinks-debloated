@@ -13,6 +13,7 @@
 *://*.ouo.io/*
 *://*.adbtc.top/*
 *://*.linkbox.to/*
+*://*.modsfire.com/*
 *://*.the2.link/*
 *://*.keeplinks.org/*
 *://*.forex-22.com/*
@@ -170,7 +171,6 @@
 *://*.flickr.com/*
 *://*.go.paylinks.cloud/*
 *://*.multiup.io/*
-*://*.modsfire.com/*
 *://*.social-unlock.com/*
 *://*.gamezigg.com/*
 *://*.shrs.link/*
