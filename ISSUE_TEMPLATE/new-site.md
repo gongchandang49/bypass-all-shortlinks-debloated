@@ -16,9 +16,10 @@ _(Must be a full URL, longer than above. If you can add several, even better)_
 
 ____
 
-If you use or tried to use **uBlock Origin custom filters**, please mention them below.
+If you enabled **uBlock Origin default filters**, please list them below.
+(Example: EasyList Privacy, Fanboy, etc.)
 
 
 ____
 
-- [ ] I confirm I have tested this URL on Firefox or Brave (with shields adblocking disabled), on a clean profile with no other extensions or VPN except Violentmonkey + Bypass All Shortlinks Debloated.
+- [X] I confirm I have tested this URL on Firefox or Brave (with shields adblocking disabled), on a clean profile with no other extensions or VPN except Violentmonkey + Bypass All Shortlinks Debloated + uBlock Origin.
