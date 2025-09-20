@@ -2,9 +2,9 @@
 // @name       Bypass All Shortlinks Debloated
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
-// @author     Amm0ni4
+// @author     Amm0ni4, gongchandang49
 // @noframes
-// @version    96.4.6
+// @version    96.5
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -14,10 +14,10 @@
 // @grant      window.onurlchange
 // @grant      GM_registerMenuCommand
 // @icon       https://cdn-icons-png.flaticon.com/512/14025/14025295.png
-// @require    https://update.greasyfork.org/scripts/528923/1588272/MonkeyConfig%20Mod.js
+// @require    https://update.greasyfork.org/scripts/528923/1599357/MonkeyConfig%20Mod.js
 // @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
-// @homepageURL    https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated
-// @supportURL     https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues
+// @homepageURL    https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated
+// @supportURL     https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/issues
 // @include /^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/
 // @match *://*/recaptcha/api2/*
 // @match *://*.gocmod.com/*
@@ -257,7 +257,7 @@
 // @include /^(https?:\/\/)(.+)?(anonymfile.com|sharefile.co|gofile.to)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((carbikesupdate|carbikenation).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((uploadrar|fingau|getpczone|wokaz).com|uptomega.me)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((ez4mods|game5s|sharedp|fastcars1).com|tech5s.co|a4a.site|rcccn.in|creditbay.xyz)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((ez4mods|game5s|sharedp|fastcars1|carbikenation).com|tech5s.co|a4a.site|rcccn.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(4hi.in|(10short|animerigel|encurt4|encurtacash).com|finish.wlink.us|passivecryptos.xyz|fbol.top|kut.li|shortie.sbs|zippynest.online|faucetsatoshi.site|tfly.link|oii.si)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((ecryptly|equickle).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((down.fast-down|down.mdiaload).com)(\/.*)/
@@ -559,6 +559,6 @@
 // @exclude /^(https?:\/\/)([^\/]+\.)?((cloudflare|github|aliyun|reddit|bing|yahoo|microsoft|whatsapp|amazon|ebay|payoneer|paypal|skrill|stripe|stripecdn|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|blogger|(accounts|studio).youtube|atlassian|pinterest|twitter|x|live|linkedin|fastbull|tradingview|deepseek|chatgpt|openai|grok|bilibili|indodax|bmcdn6|fbsbx|googlesyndication|amazon-adsystem|pubmatic|gstatic).com|(greasyfork|openuserjs|telegram|wikipedia|lichess).org|(doubleclick|yahoo).net|proton.me|stripe.network|meta.ai|codepen.io|(shopee|lazada|rakuten|maybank|binance).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).(edu|gov))(\/.*)/
 // @exclude /^https?:\/\/(?!(www\.google\.com\/(recaptcha\/|url)|docs\.google\.com\/|drive\.google\.com\/)).*google\..*/
 // @exclude /^https?:\/\/([a-z0-9]+\.)*(facebook|instagram|tiktok)\.com\/(?!(flx\/warn\/|linkshim\/|link\/v2)).*/
-// @downloadURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
-// @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
+// @downloadURL https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
+// @updateURL https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
 // ==/UserScript==
