@@ -21,4 +21,10 @@ If you noticed some **potential causes or weird behaviours** not happening befor
 
 ____
 
-- [ ] I confirm I have tested this URL on Firefox or Brave (with shields adblocking disabled), on a clean profile with no other extensions or VPN except Violentmonkey + Bypass All Shortlinks Debloated.
+If you enabled **uBlock Origin default filters**, please list them below.
+(Example: EasyList Privacy, Fanboy, etc.)
+
+
+____
+
+- [ ] I confirm I have tested this URL on Firefox or Brave (with shields adblocking disabled), on a clean profile with no other extensions or VPN except Violentmonkey + Bypass All Shortlinks Debloated + uBlock Origin.
