@@ -1,5 +1,37 @@
 import re
 
+def update_version(content):
+    version_number_pattern = r'@version\s+(\d+(\.\d+){0,2})'
+    match = re.search(version_number_pattern, content)
+    
+    if match:
+        current_version = match.group(1)
+        print(f"Current version found: {current_version}")
+        
+        last_patch_version = "0.0.0"
+        if len(current_version.split('.')) == 3:
+            last_patch_version = current_version.split('.')[-1]
+        
+        appended_version_parts = list(map(int, last_patch_version.split('.')))
+        
+        if appended_version_parts[2] < 9:
+            appended_version_parts[2] += 1
+        else:
+            appended_version_parts[2] = 0
+            if appended_version_parts[1] < 9:
+                appended_version_parts[1] += 1
+            else:
+                appended_version_parts[1] = 0
+                appended_version_parts[0] += 1
+        
+        new_patch_version = '.'.join(map(str, appended_version_parts))
+        
+        updated_content = re.sub(version_number_pattern, f'@version    {current_version}-patch{new_patch_version}', content)
+        
+        return updated_content
+    else:
+        return "No version found.", "0.0.0"
+
 def modify_script(input_script_path, includes_file_path, output_script_path):
     # Read the content of the input script
     with open(input_script_path, 'r', encoding='utf-8') as input_file:
@@ -128,6 +160,9 @@ def modify_script_extra(file_path):
 
             # Remove unused
             content = content.replace("// @connect    nocaptchaai.com\n", "")
+
+            # gongchandang49 - add patch version to distinguish from untouched and Ammonia
+            content = update_version(content)
 
             # Add "@noframes"
             if not "@noframes" in content:
