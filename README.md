@@ -6,6 +6,8 @@ A fork of *Bypass All Shortlinks* (originally by *bloggerpemula*), with some add
 ## Install
 **Install with [this link](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)**
 
+> To avoid potential issues, please remember to disable Amm0ni4's version in case you have it installed.
+
 (you need a userscript manager like [Violentmonkey](https://violentmonkey.github.io/) installed in your web browser)
 
 *I test the script with Brave/Firefox + uBlock Origin + Violentmonkey, so that is the supported setup.*

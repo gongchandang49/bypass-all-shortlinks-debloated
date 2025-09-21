@@ -5,6 +5,8 @@ title: "[YOUR_BROKEN_SITE_HERE] "
 labels: "Broken"
 ---
 
+> #### ⚠️ Before reporting a broken site, please remember to <u>disable Amm0ni4's version</u> in case you have it, and try again just with [mine](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js).
+
 **Broken site you are reporting (domain only):**
 
 
