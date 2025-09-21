@@ -8,7 +8,7 @@ def update_version(content):
         current_version = match.group(1)
         print(f"Current version found: {current_version}")
         
-        last_patch_version = "0.0.0"
+        last_patch_version = "0.0.1"
         if len(current_version.split('.')) == 3:
             last_patch_version = current_version.split('.')[-1]
         

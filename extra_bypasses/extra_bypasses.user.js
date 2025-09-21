@@ -252,6 +252,8 @@
 // @include     /vplink.in/
 // @include     /^https:\/\/devuploads\.com\/.*/
 // @include     /link.paid4link.com/
+// @include     /smallshorts.com/
+// @include     /ffindia.in/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1636,9 +1638,12 @@
     /count.vipurl.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null; //
 
     // 10drives - https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues/233
-    /foodtechnos.in/.test(url) ? afterDOMLoaded(function() {
-        clickIfExists('a.btn:nth-child(1)');
-        redirectIfExists('a#lsdwnbtn');
+    // gongchandang49 - updated 2025-09 - Amm0ni4/issues/363
+    // 6 seconds delay required (not strict), otherwise href = /
+    /foodtechnos.in/.test(url) ? afterDOMLoaded(function(){
+        const o=document.createElement('div');o.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);color:white;display:flex;align-items:center;justify-content:center;font-size:24px';o.innerText='Wait...';
+        document.body.appendChild(o);
+        setTimeout(function(){document.body.removeChild(o);clickIfExists('a.btn:nth-child(1)');clickIfExists('a#hss:nth-child(1)');redirectIfExists('a#lsdwnbtn');},6000);
     }) : null;
 
     // upfiles.app
@@ -1747,6 +1752,18 @@
             }
         })
     }
+
+    // ---- smallshorts     Amm0ni4/issues/363
+    if (/hosting.ffindia.in/.test(url)) { boostTimers(); afterWindowLoaded(function() { window.adb = 0; window.adBlockEnabled = 0; window.wpsafelinkCount = 0; modifyScript('10000', '0'); modifyScript('2000', '0'); modifyScript('000', '0'); modifyScript('adBlockEnabled=true', 'adBlockEnabled=false'); modifyScript('let adBlockEnabled', 'adBlockEnabled'); modifyScript('let wpsafelinkCount', 'wpsafelinkCount');
+    const intervalId = setInterval(() => { window.adb = 0; window.adBlockEnabled = 0; window.wpsafelinkCount = 0; const adbElement = document.getElementById("adb"); const adbModelElement = document.getElementById("AdbModel"); const wpsafeWaitElement = document.getElementById('wpsafe-wait2'); const wpsafelinkhumanElement = document.getElementById('wpsafelinkhuman'); if (adbElement) { adbElement.setAttribute("style", "display:none"); } if (adbModelElement) { adbModelElement.setAttribute("style", "display:none; visibility: hidden"); } if (wpsafeWaitElement) { wpsafeWaitElement.setAttribute("style", "display:block"); }
+    try { wpsafehuman(); } catch (error) { console.error("wpsafehuman() is not defined or an error occurred:", error); } if (wpsafelinkhumanElement) { wpsafelinkhumanElement.click(); } const wpsafeLinkElement = document.getElementById('wpsafe-link'); if (wpsafeLinkElement) { const anchorElement = wpsafeLinkElement.querySelector('a[onclick*="smallshorts"]'); if (anchorElement) { anchorElement.click(); clearInterval(intervalId); } } }, 100); }); }
+
+
+    /smallshorts.com/.test(url) ? afterDOMLoaded(function() {
+          redirectToAnyLinkWithMatchingTextContent("Get Link");
+      }) : null;
+
+    // --------
 
     //apkadmin
     /apkadmin.com/.test(url) ? afterDOMLoaded(function() {
