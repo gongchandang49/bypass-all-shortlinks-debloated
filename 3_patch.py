@@ -1,36 +1,43 @@
 import re
 
-def update_version(content):
-    version_number_pattern = r'@version\s+(\d+(\.\d+){0,2})'
+def extract_version(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        content = file.read()
+    
+    version_number_pattern = r'@version\s+([\d\.]+)(?:-patch([\d\.]+))?'
     match = re.search(version_number_pattern, content)
     
     if match:
         current_version = match.group(1)
-        print(f"Current version found: {current_version}")
+        patch_version = match.group(2)
+        print(f"Current version found: {current_version}{'-patch' + patch_version if patch_version else 'None'}")
         
-        last_patch_version = "0.0.1"
-        if len(current_version.split('.')) == 3:
-            last_patch_version = current_version.split('.')[-1]
-        
-        appended_version_parts = list(map(int, last_patch_version.split('.')))
-        
-        if appended_version_parts[2] < 9:
-            appended_version_parts[2] += 1
+        if patch_version:
+            patch_version = patch_version
         else:
-            appended_version_parts[2] = 0
-            if appended_version_parts[1] < 9:
-                appended_version_parts[1] += 1
+            patch_version = "0.0.1"
+        
+        patch_parts = list(map(int, patch_version.split('.')))
+        
+        if patch_parts[2] < 9:
+            patch_parts[2] += 1
+        else:
+            patch_parts[2] = 0
+            if patch_parts[1] < 9:
+                patch_parts[1] += 1
             else:
-                appended_version_parts[1] = 0
-                appended_version_parts[0] += 1
+                patch_parts[1] = 0
+                patch_parts[0] += 1
         
-        new_patch_version = '.'.join(map(str, appended_version_parts))
+        new_patch_version = '.'.join(map(str, patch_parts))
+        new_full_version = f'{current_version}-patch{new_patch_version}'
         
-        updated_content = re.sub(version_number_pattern, f'@version    {current_version}-patch{new_patch_version}', content)
-        
-        return updated_content
+        print(f"New version will be: {new_full_version}")
+        return new_full_version
     else:
-        return "No version found.", "0.0.0"
+        print("No version found.")
+        return "96.5-patch0.0.1"  # fallback
+
 
 def modify_script(input_script_path, includes_file_path, output_script_path):
     # Read the content of the input script
@@ -83,7 +90,7 @@ def remove_lines_with_strings(js_code, strings_to_remove):
     filtered_code = '\n'.join(filtered_lines)
     return filtered_code
 
-def modify_script_extra(file_path):
+def modify_script_extra(file_path, new_version):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
@@ -162,7 +169,8 @@ def modify_script_extra(file_path):
             content = content.replace("// @connect    nocaptchaai.com\n", "")
 
             # gongchandang49 - add patch version to distinguish from untouched and Ammonia
-            content = update_version(content)
+            sub_pattern = r'@version\s+([\d\.]+)(?:-patch[\d\.]+)?'
+            content = re.sub(sub_pattern, f'@version    {new_version}', content)
 
             # Add "@noframes"
             if not "@noframes" in content:
@@ -262,8 +270,9 @@ def main():
     input_script_path = 'untouched_Bypass_All_Shortlinks_patched.user.js'
     includes_file_path = 'includes.txt'
     output_script_path = 'Bypass_All_Shortlinks.user.js'
+    new_version = extract_version(output_script_path)
     modify_script(input_script_path, includes_file_path, output_script_path)
-    modify_script_extra(output_script_path)
+    modify_script_extra(output_script_path, new_version)
     generate_metadata_file("Bypass_All_Shortlinks.user.js", "Bypass_All_Shortlinks.meta.js")
 
 if __name__ == "__main__":
