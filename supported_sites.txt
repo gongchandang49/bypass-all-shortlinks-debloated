@@ -293,7 +293,7 @@ https://paster.so/*
 /(cybercityhelp|akcartoons).in/
 /www.akcartoons.in/
 /go.moonlinks.in/
-/shrinkme.(us|site|cc|vip|dev|ink)/
+/shrinkme.(us|site|cc|vip|dev|ink|click)/
 /test.shrinkurl.org/
 /shareus.io/
 /shareus\.io\/go\?sid=/

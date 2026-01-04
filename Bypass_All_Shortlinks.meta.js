@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4, gongchandang49
 // @noframes
-// @version    96.5-patch0.0.4
+// @version    96.5-patch0.0.5
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -315,7 +315,7 @@
 // @include     /(cybercityhelp|akcartoons).in/
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
-// @include     /shrinkme.(us|site|cc|vip|dev|ink)/
+// @include     /shrinkme.(us|site|cc|vip|dev|ink|click)/
 // @include     /test.shrinkurl.org/
 // @include     /shareus.io/
 // @include     /shareus\.io\/go\?sid=/

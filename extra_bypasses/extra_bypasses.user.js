@@ -11,7 +11,7 @@
 // @include     /(cybercityhelp|akcartoons).in/
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
-// @include     /shrinkme.(us|site|cc|vip|dev|ink)/
+// @include     /shrinkme.(us|site|cc|vip|dev|ink|click)/
 // @include     /test.shrinkurl.org/
 // @include     /shareus.io/
 // @include     /shareus\.io\/go\?sid=/
@@ -519,7 +519,7 @@
     /techtnet.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#originalLink')}) : null;
 
     //shrinkme.us
-    /shrinkme.(us|site|cc|vip|dev|ink)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    /shrinkme.(us|site|cc|vip|dev|ink|click)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
 
     // /travelkuku.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn2')}) : null;
 
