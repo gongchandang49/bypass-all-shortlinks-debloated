@@ -66,7 +66,7 @@ def modify_script(input_script_path, includes_file_path, output_script_path):
 
     # Insert additional includes
     additional_includes = [
-        "// @include /^(?:https?:\/\/)?(?:www\.)?(?:google\.com|recaptcha\.net)\/recaptcha\/api2\/.*$/",
+        "// @include /^(?:https?:\\/\\/)?(?:www\\.)?(?:google\\.com|recaptcha\\.net)\\/recaptcha\\/api2\\/.*$/",
         "// @match *://*/recaptcha/api2/*"
         "\n",
     ]
