@@ -9,24 +9,21 @@ labels: "Broken"
 
 **Broken site you are reporting (domain only):**
 
-
+- ...
 ____
 
-**Example link(s) that you tried:**
-_(Must be a full URL, longer than above. If you can add several, even better)_
+**Example links:**
 
+_(Must be the FULL and ORIGINAL links. Please add SEVERAL links if you can.)_
+
+- ...
+- ...
 
 ____
 
 If you noticed some **potential causes or weird behaviours** not happening before, please mention them below.
 
-
+- ...
 ____
 
-If you enabled **uBlock Origin default filters**, please list them below.
-(Example: EasyList Privacy, Fanboy, etc.)
-
-
-____
-
-- [ ] I confirm I have tested this URL on Firefox or Brave (with shields adblocking disabled), on a clean profile with no other extensions or VPN except Violentmonkey + Bypass All Shortlinks Debloated + uBlock Origin.
+> #### ⚠️ PLEASE test the script with FIREFOX or BRAVE (shields off) on a CLEAN PROFILE with ONLY Violentmonkey + Bypass All Shortlinks Debloated + uBlock Origin. Disable any VPN too.
