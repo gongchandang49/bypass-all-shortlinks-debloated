@@ -5,21 +5,12 @@ title: "[YOUR_NEW_SITE_HERE]"
 labels: "New site"
 ---
 
-**New site you want to add (domain only):**
+**Shortened links that you want to bypass:**
 
-
+_(Must be the FULL and ORIGINAL links. Please add SEVERAL links if you can.)_
+____
+- ...
+- ...
 ____
 
-**Example link(s) that you want to bypass:**
-_(Must be a full URL, longer than above. If you can add several, even better)_
-
-
-____
-
-If you enabled **uBlock Origin default filters**, please list them below.
-(Example: EasyList Privacy, Fanboy, etc.)
-
-
-____
-
-- [X] I confirm I have tested this URL on Firefox or Brave (with shields adblocking disabled), on a clean profile with no other extensions or VPN except Violentmonkey + Bypass All Shortlinks Debloated + uBlock Origin.
+> #### ⚠️ PLEASE test the script with FIREFOX or BRAVE (shields off) on a CLEAN PROFILE with ONLY Violentmonkey + Bypass All Shortlinks Debloated + uBlock Origin. Disable any VPN too.
