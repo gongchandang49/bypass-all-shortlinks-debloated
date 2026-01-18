@@ -253,7 +253,7 @@
 // @include     /^https:\/\/devuploads\.com\/.*/
 // @include     /link.paid4link.com/
 // @include     /smallshorts.com/
-// @include     /ffindia.in/
+// @include     /(kingshort|jobsvb|ffindia|joblicense).in|(oreoauto|theglobaldiary.com)|shopizo.fun/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -1753,10 +1753,8 @@
         })
     }
 
-    // ---- smallshorts     Amm0ni4/issues/363
-    if (/hosting.ffindia.in/.test(url)) { boostTimers(); afterWindowLoaded(function() { window.adb = 0; window.adBlockEnabled = 0; window.wpsafelinkCount = 0; modifyScript('10000', '0'); modifyScript('2000', '0'); modifyScript('000', '0'); modifyScript('adBlockEnabled=true', 'adBlockEnabled=false'); modifyScript('let adBlockEnabled', 'adBlockEnabled'); modifyScript('let wpsafelinkCount', 'wpsafelinkCount');
-    const intervalId = setInterval(() => { window.adb = 0; window.adBlockEnabled = 0; window.wpsafelinkCount = 0; const adbElement = document.getElementById("adb"); const adbModelElement = document.getElementById("AdbModel"); const wpsafeWaitElement = document.getElementById('wpsafe-wait2'); const wpsafelinkhumanElement = document.getElementById('wpsafelinkhuman'); if (adbElement) { adbElement.setAttribute("style", "display:none"); } if (adbModelElement) { adbModelElement.setAttribute("style", "display:none; visibility: hidden"); } if (wpsafeWaitElement) { wpsafeWaitElement.setAttribute("style", "display:block"); }
-    try { wpsafehuman(); } catch (error) { console.error("wpsafehuman() is not defined or an error occurred:", error); } if (wpsafelinkhumanElement) { wpsafelinkhumanElement.click(); } const wpsafeLinkElement = document.getElementById('wpsafe-link'); if (wpsafeLinkElement) { const anchorElement = wpsafeLinkElement.querySelector('a[onclick*="smallshorts"]'); if (anchorElement) { anchorElement.click(); clearInterval(intervalId); } } }, 100); }); }
+    // ---- smallshorts     Amm0ni4/issues/363, gongchandang49/issues/14
+    if (/(kingshort|jobsvb|ffindia|joblicense).in|(oreoauto|theglobaldiary.com)|shopizo.fun/.test(url)) { afterWindowLoaded(function() { window.adb=0;window.adBlockEnabled=0;window.wpsafelinkCount=0; modifyScript('10000','0');modifyScript('2000','0');modifyScript('000','0'); modifyScript('adBlockEnabled=true','adBlockEnabled=false'); modifyScript('let adBlockEnabled','adBlockEnabled');modifyScript('let wpsafelinkCount','wpsafelinkCount'); let executed=false;const intervalId=setInterval(async()=>{if(executed)return;window.adb=0;window.adBlockEnabled=0;window.wpsafelinkCount=0;const wpsafeWaitElement=document.getElementById('wpsafe-wait2');if(wpsafeWaitElement)wpsafeWaitElement.style.display="block"; document.querySelectorAll('h1').forEach(h1=>{h1.textContent="DO NOT CLICK ANY BUTTON";h1.style.backgroundColor="green";h1.style.color="white";}); await new Promise(resolve=>setTimeout(resolve,3000));try{if(typeof wpsafehuman==="function")await wpsafehuman();}catch(e){}await new Promise(resolve=>setTimeout(resolve,3000));if(typeof wpsafegenerate==="function")await wpsafegenerate();const wpsafelinkhumanElement=document.getElementById('wpsafelinkhuman');if(wpsafelinkhumanElement)wpsafelinkhumanElement.click();const wpsafeLinkElement=document.getElementById('wpsafe-link');if(wpsafeLinkElement){const anchorElement=wpsafeLinkElement.querySelector('a[onclick*="safelink_redirect"]');if(anchorElement){anchorElement.click();executed=true;clearInterval(intervalId);}}},2000);});}
 
 
     /smallshorts.com/.test(url) ? afterDOMLoaded(function() {
