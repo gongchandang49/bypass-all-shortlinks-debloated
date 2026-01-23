@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4, gongchandang49
 // @noframes
-// @version    96.5-patch0.0.7
+// @version    96.5-patch0.0.8
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -253,7 +253,7 @@
 // @include /^(https?:\/\/)(.+)?((importantclass|hamroguide).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(up-load.io|downloadani.me)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|(offeergames|todogame).online|whatgame.xyz|gold-24.net)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((tejtime24|drinkspartner|sportswordz|newspute).com|(raftarsamachar|gadialert|jobinmeghalaya|raftarwords).in)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((tejtime24|drinkspartner|sportswordz|newspute).com|(raftarsamachar|gadialert|jobinmeghalaya|raftarwords|sharclub).in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn|ziggame|gamezigg).com|azmath.info|aztravels.net|handydecor.com.vn)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(anonymfile.com|sharefile.co|gofile.to)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((carbikesupdate|carbikenation).com)(\/.*)/
@@ -500,7 +500,7 @@
 // @include     /hubcloud.(club|dad)\/tg\/go.php\?re=/
 // @include     /bgmiaimassist.in|(stockwallah|inventoryidea).com/
 // @include     /^https:\/\/relampagomovies\.com\/.+/
-// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/
+// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz|sharclub).in|cookad.net|(tejtime24|cyberlynews|quizrent|24jobalert).com/
 // @include     /linkshortify.in|lksfy.com/
 // @include     /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/
 // @include     /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
@@ -1052,7 +1052,7 @@
       waitForElm('a#pagelinkhref.btn.btn-lg.btn-success.my-4.px-3.text-center', gtr => redirect(gtr.href, false));});
     BypassedByBloggerPemula(/mediafire.com/, () => {if (!cfg.get('AutoDL')) {BpNote('Auto Download Feature Not Yet Activated!');return;}
       if (location.href.includes('file/')) {let mf = bp('.download_link .input').getAttribute('href');BpNote(mf);location.replace(mf);}});
-    BypassedByBloggerPemula(/(tejtime24|drinkspartner|sportswordz|newspute).com|(raftarsamachar|gadialert|jobinmeghalaya|raftarwords).in/, () => {
+    BypassedByBloggerPemula(/(tejtime24|drinkspartner|sportswordz|newspute).com|(raftarsamachar|gadialert|jobinmeghalaya|raftarwords|sharclub).in/, () => {
       window.scrollTo(0, 9999);DoIfExists('#topButton.pro_btn', 2);DoIfExists('#bottomButton',3);ReadytoClick('#open-link > .pro_btn', 4);});
     BypassedByBloggerPemula(/downloader.tips/, () => {CaptchaDone(() => {DoIfExists('button.btn.btn-primary');});
       let downloader = setInterval(() => {if (bp('#count').innerText == '0') {clearInterval(downloader);DoIfExists('.btn-primary.btn');}}, 1 * 1000);});
@@ -1806,7 +1806,7 @@
             setTimeout(() => button.click(), 500);
         }
     }, 2000));
-    if (/(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/.test(url)){
+    if (/(shramikcard|pmkisanlists|techishant|cinedesi|thevouz|sharclub).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/.test(url)){
         preventForcedFocusOnWindow();//preventForcedFocusOnWindow not working for this site apparently
         afterWindowLoaded(function() {modifyScript('timeLeft = duration', 'timeLeft = 0')}); // skip timers
         //##Intermediate buttons

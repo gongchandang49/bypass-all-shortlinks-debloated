@@ -60,7 +60,7 @@
 /^(https?:\/\/)(.+)?((importantclass|hamroguide).com)(\/.*)/
 /^(https?:\/\/)(.+)?(up-load.io|downloadani.me)(\/.*)/
 /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|(offeergames|todogame).online|whatgame.xyz|gold-24.net)(\/.*)/
-/^(https?:\/\/)(.+)?((tejtime24|drinkspartner|sportswordz|newspute).com|(raftarsamachar|gadialert|jobinmeghalaya|raftarwords).in)(\/.*)/
+/^(https?:\/\/)(.+)?((tejtime24|drinkspartner|sportswordz|newspute).com|(raftarsamachar|gadialert|jobinmeghalaya|raftarwords|sharclub).in)(\/.*)/
 /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn|ziggame|gamezigg).com|azmath.info|aztravels.net|handydecor.com.vn)(\/.*)/
 /^(https?:\/\/)(.+)?(anonymfile.com|sharefile.co|gofile.to)(\/.*)/
 /^(https?:\/\/)(.+)?((carbikesupdate|carbikenation).com)(\/.*)/

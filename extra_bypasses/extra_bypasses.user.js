@@ -197,7 +197,7 @@
 // @include     /hubcloud.(club|dad)\/tg\/go.php\?re=/
 // @include     /bgmiaimassist.in|(stockwallah|inventoryidea).com/
 // @include     /^https:\/\/relampagomovies\.com\/.+/
-// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/
+// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz|sharclub).in|cookad.net|(tejtime24|cyberlynews|quizrent|24jobalert).com/
 // @include     /linkshortify.in|lksfy.com/
 // @include     /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/
 // @include     /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/
@@ -690,7 +690,7 @@
             setTimeout(() => button.click(), 500);
         }
     }, 2000));
-    if (/(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/.test(url)){
+    if (/(shramikcard|pmkisanlists|techishant|cinedesi|thevouz|sharclub).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/.test(url)){
         preventForcedFocusOnWindow();//preventForcedFocusOnWindow not working for this site apparently
         afterWindowLoaded(function() {modifyScript('timeLeft = duration', 'timeLeft = 0')}); // skip timers
         //##Intermediate buttons

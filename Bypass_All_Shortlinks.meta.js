@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4, gongchandang49
 // @noframes
-// @version    96.5-patch0.0.7
+// @version    96.5-patch0.0.8
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -253,7 +253,7 @@
 // @include /^(https?:\/\/)(.+)?((importantclass|hamroguide).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(up-load.io|downloadani.me)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|(offeergames|todogame).online|whatgame.xyz|gold-24.net)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((tejtime24|drinkspartner|sportswordz|newspute).com|(raftarsamachar|gadialert|jobinmeghalaya|raftarwords).in)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((tejtime24|drinkspartner|sportswordz|newspute).com|(raftarsamachar|gadialert|jobinmeghalaya|raftarwords|sharclub).in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn|ziggame|gamezigg).com|azmath.info|aztravels.net|handydecor.com.vn)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(anonymfile.com|sharefile.co|gofile.to)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((carbikesupdate|carbikenation).com)(\/.*)/
@@ -500,7 +500,7 @@
 // @include     /hubcloud.(club|dad)\/tg\/go.php\?re=/
 // @include     /bgmiaimassist.in|(stockwallah|inventoryidea).com/
 // @include     /^https:\/\/relampagomovies\.com\/.+/
-// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/
+// @include     /(shramikcard|pmkisanlists|techishant|cinedesi|thevouz|sharclub).in|cookad.net|(tejtime24|cyberlynews|quizrent|24jobalert).com/
 // @include     /linkshortify.in|lksfy.com/
 // @include     /tii.la|oei.la|iir.la|tvi.la|oii.la|tpi.li|lnbz.la/
 // @include     /^https:\/\/[^\/]+\/safe\.php\?link=https:\/\/modijiurl\.com\/[^\/]+\/\?mid=.*$/

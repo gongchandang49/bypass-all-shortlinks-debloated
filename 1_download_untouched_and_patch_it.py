@@ -213,6 +213,9 @@ def modify_file_with_my_fixes(input_file, output_file):
 
   const sl = (h => {switch (h.host)""")
 
+    # gongchandang49 - issues/15 - lksfy fix 2026-01-23
+    content = content.replace("(raftarsamachar|gadialert|jobinmeghalaya|raftarwords).in", "(raftarsamachar|gadialert|jobinmeghalaya|raftarwords|sharclub).in")
+
 
     if not content.endswith("\n"):
         content += "\n"
