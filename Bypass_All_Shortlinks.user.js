@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4, gongchandang49
 // @noframes
-// @version    96.5-patch0.0.8
+// @version    96.5-patch0.0.9
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -1806,7 +1806,7 @@
             setTimeout(() => button.click(), 500);
         }
     }, 2000));
-    if (/(shramikcard|pmkisanlists|techishant|cinedesi|thevouz|sharclub).in|cookad.net|(tejtime24|cyberlynews|quizrent).com/.test(url)){
+    if (/(shramikcard|pmkisanlists|techishant|cinedesi|thevouz|sharclub).in|cookad.net|(tejtime24|cyberlynews|quizrent|24jobalert).com/.test(url)){
         preventForcedFocusOnWindow();//preventForcedFocusOnWindow not working for this site apparently
         afterWindowLoaded(function() {modifyScript('timeLeft = duration', 'timeLeft = 0')}); // skip timers
         //##Intermediate buttons
