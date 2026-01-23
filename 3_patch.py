@@ -138,6 +138,11 @@ def modify_script_extra(file_path, new_version):
             content = content.replace("https://openuserjs.org/meta/Bloggerpemula/Bypass_All_Shortlinks_Manual_Captcha.meta.js",
                                       "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js")
 
+            toremove = '''// ================================================================================================================================================================\n//                                          PLEASE READ SCRIPT INFO BEFORE USE\n//                                      PLEASE RESPECT IF MY SCRIPTS USEFUL FOR YOU\n//                      DON'T TRY TO COPY PASTE MY SCRIPTS THEN SHARE TO OTHERS LIKE YOU ARE THE CREATOR\n//                 PLEASE DON'T REMOVE OR CHANGE MY BLOG, DISABLE YOUR ADBLOCK IN MY BLOG , THANKS FOR YOUR SUPPORT\n//              My Blog is Very Important to give some Delay for safe away ,Track New Shortlinks , Broken Bypass etc...\n// Thanks so much to @JustOlaf , @Konf , @hacker09 , @juansi , @NotYou , @cunaqr And @Rust1667 for Helping me , make my script even better\n//                        Thanks so much to @varram for providing a Great Bypass Site bypass.city and adbypass.org\n//                                And also Thank you to everyone who has Contributed with Good Feedback.\n// =================================================================================================================================================================\n// NOTES\n// Change Your Delay in the settings options from 5 to 10 or 20 if you have issues like Your action marked Suspicious,Don't try to bypass ,Don't use Speedster, etc\n// What do you think if I move all the code to my own server, so people who can only duplicate my script and change the code as they wish, will not be able to do it anymore?\n// Say thank you to the donors by leaving good feedback, because of them I am more enthusiastic to improve the quality and add new features to the script.\n// My Scripts Works in All Browsers and All Userscript Extensions , But Better if You Use Firefox Browser and Violentmonkey\n'''
+
+            content = content.replace(toremove, '')
+
+
             # Fixes
 
             # Change some default settings

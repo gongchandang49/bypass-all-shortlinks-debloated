@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4, gongchandang49
 // @noframes
-// @version    96.5-patch0.0.6
+// @version    96.5-patch0.0.7
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -553,7 +553,7 @@
 // @include     /^https:\/\/devuploads\.com\/.*/
 // @include     /link.paid4link.com/
 // @include     /smallshorts.com/
-// @include     /(kingshort|jobsvb|ffindia|joblicense).in|(oreoauto|theglobaldiary.com)|shopizo.fun/
+// @include     /(kingshort|jobsvb|ffindia|joblicense).in|(oreoauto|theglobaldiary.com)|shopizo.fun|(mtc1|mtc2|mtc3)/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde|infoguidebd|worthtester|4kphotoediting|befinja).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup|muskokay|zingif).xyz|gamcabd.org|gamerking.shop|nidbd.me)(\/.*)/
 // @include     /^(https?:\/\/)(.+)?((mega-enlace|acortados).com|tulink.org)/
 // @include     /^https:\/\/(.*\.|)(playonpc.online|(quins|megahosting).us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|ngebike).com|gally.shop|(qanin|ivnlnews|jobvox|gfcg).xyz|evegor.net|freeat30.org|droplink.co)\/.*/
@@ -564,21 +564,6 @@
 // @downloadURL https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
 // ==/UserScript==
-// ================================================================================================================================================================
-//                                          PLEASE READ SCRIPT INFO BEFORE USE
-//                                      PLEASE RESPECT IF MY SCRIPTS USEFUL FOR YOU
-//                      DON'T TRY TO COPY PASTE MY SCRIPTS THEN SHARE TO OTHERS LIKE YOU ARE THE CREATOR
-//                 PLEASE DON'T REMOVE OR CHANGE MY BLOG, DISABLE YOUR ADBLOCK IN MY BLOG , THANKS FOR YOUR SUPPORT
-//              My Blog is Very Important to give some Delay for safe away ,Track New Shortlinks , Broken Bypass etc...
-// Thanks so much to @JustOlaf , @Konf , @hacker09 , @juansi , @NotYou , @cunaqr And @Rust1667 for Helping me , make my script even better
-//                        Thanks so much to @varram for providing a Great Bypass Site bypass.city and adbypass.org
-//                                And also Thank you to everyone who has Contributed with Good Feedback.
-// =================================================================================================================================================================
-// NOTES
-// Change Your Delay in the settings options from 5 to 10 or 20 if you have issues like Your action marked Suspicious,Don't try to bypass ,Don't use Speedster, etc
-// What do you think if I move all the code to my own server, so people who can only duplicate my script and change the code as they wish, will not be able to do it anymore?
-// Say thank you to the donors by leaving good feedback, because of them I am more enthusiastic to improve the quality and add new features to the script.
-// My Scripts Works in All Browsers and All Userscript Extensions , But Better if You Use Firefox Browser and Violentmonkey
 
 (function() {
 'use strict';
@@ -2884,8 +2869,8 @@
         })
     }
 
-    // ---- smallshorts     Amm0ni4/issues/363, gongchandang49/issues/14
-    if (/(kingshort|jobsvb|ffindia|joblicense).in|(oreoauto|theglobaldiary.com)|shopizo.fun/.test(url)) { afterWindowLoaded(function() { window.adb=0;window.adBlockEnabled=0;window.wpsafelinkCount=0; modifyScript('10000','0');modifyScript('2000','0');modifyScript('000','0'); modifyScript('adBlockEnabled=true','adBlockEnabled=false'); modifyScript('let adBlockEnabled','adBlockEnabled');modifyScript('let wpsafelinkCount','wpsafelinkCount'); let executed=false;const intervalId=setInterval(async()=>{if(executed)return;window.adb=0;window.adBlockEnabled=0;window.wpsafelinkCount=0;const wpsafeWaitElement=document.getElementById('wpsafe-wait2');if(wpsafeWaitElement)wpsafeWaitElement.style.display="block"; document.querySelectorAll('h1').forEach(h1=>{h1.textContent="DO NOT CLICK ANY BUTTON";h1.style.backgroundColor="green";h1.style.color="white";}); await new Promise(resolve=>setTimeout(resolve,3000));try{if(typeof wpsafehuman==="function")await wpsafehuman();}catch(e){}await new Promise(resolve=>setTimeout(resolve,3000));if(typeof wpsafegenerate==="function")await wpsafegenerate();const wpsafelinkhumanElement=document.getElementById('wpsafelinkhuman');if(wpsafelinkhumanElement)wpsafelinkhumanElement.click();const wpsafeLinkElement=document.getElementById('wpsafe-link');if(wpsafeLinkElement){const anchorElement=wpsafeLinkElement.querySelector('a[onclick*="safelink_redirect"]');if(anchorElement){anchorElement.click();executed=true;clearInterval(intervalId);}}},2000);});}
+    // ---- shortxlinks     Amm0ni4/issues/363, gongchandang49/issues/14
+    if (/(kingshort|jobsvb|ffindia|joblicense).in|(oreoauto|theglobaldiary.com)|shopizo.fun|(mtc1|mtc2|mtc3)/.test(url)) { afterWindowLoaded(function() { window.adb=0;window.adBlockEnabled=0;window.wpsafelinkCount=0; modifyScript('10000','0');modifyScript('2000','0');modifyScript('000','0'); modifyScript('adBlockEnabled=true','adBlockEnabled=false'); modifyScript('let adBlockEnabled','adBlockEnabled');modifyScript('let wpsafelinkCount','wpsafelinkCount'); let executed=false;const intervalId=setInterval(async()=>{if(executed)return;window.adb=0;window.adBlockEnabled=0;window.wpsafelinkCount=0;const wpsafeWaitElement=document.getElementById('wpsafe-wait2');if(wpsafeWaitElement)wpsafeWaitElement.style.display="block"; document.querySelectorAll('h1').forEach(h1=>{h1.textContent="DO NOT CLICK ANY BUTTON";h1.style.backgroundColor="green";h1.style.color="white";}); await new Promise(resolve=>setTimeout(resolve,3000));try{if(typeof wpsafehuman==="function")await wpsafehuman();}catch(e){}await new Promise(resolve=>setTimeout(resolve,3000));if(typeof wpsafegenerate==="function")await wpsafegenerate();const wpsafelinkhumanElement=document.getElementById('wpsafelinkhuman');if(wpsafelinkhumanElement)wpsafelinkhumanElement.click();const wpsafeLinkElement=document.getElementById('wpsafe-link');if(wpsafeLinkElement){const anchorElement=wpsafeLinkElement.querySelector('a[onclick*="safelink_redirect"]');if(anchorElement){anchorElement.click();executed=true;clearInterval(intervalId);}}},2000);});}
 
 
     /smallshorts.com/.test(url) ? afterDOMLoaded(function() {
