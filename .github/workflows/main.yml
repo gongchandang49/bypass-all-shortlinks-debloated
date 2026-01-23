@@ -1,0 +1,44 @@
+name: Sync from Codeberg
+
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight UTC
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v2
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "gongchandang49"
+          git config --global user.email "170948611+gongchandang49@users.noreply.github.com"
+      - name: Pull from Codeberg
+        run: |
+          git remote add codeberg https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated.git
+          git fetch codeberg
+          git checkout main
+          git reset --hard codeberg/main
+
+          sudo apt-get update  > /dev/null 2>&1
+          sudo apt-get install git-filter-repo  > /dev/null 2>&1
+          git filter-repo --email-callback '
+            return email if email != b"gongchandang49@noreply.codeberg.org" else b"170948611+gongchandang49@users.noreply.github.com"
+            ' --force
+          git remote add origin https://github.com/${{ github.repository }}.git
+      - name: Push changes to GitHub
+        run: |
+          git push --force origin main
