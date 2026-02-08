@@ -12,7 +12,7 @@ A fork of *Bypass All Shortlinks* (originally by *bloggerpemula*), with some add
 
 *I test the script with Brave/Firefox + uBlock Origin + Violentmonkey, so that is the supported setup.*
 
-*Note for Chrome, Edge (or any similar MV3 browser) users: uBO Lite and uBlock Origin are NOT the same. Only Brave will work because it supports MV2. Disable Brave Shields adblocker for uBO to work.*
+*Note for Chrome, Edge (or any similar MV3 browser) users: Userscripts may not work correctly in your browsers. Only Brave will work because it supports MV2. Disable Brave Shields adblocker for uBlock Origin to work correctly.*
 
 ## Help make this better
 You can help by:
@@ -23,7 +23,7 @@ You can help by:
 
 ## FAQ
 - **How effective is this?** It depends on each website. Sometimes it can bypass completely, sometimes it only accelerates the timers, other times it can only auto-click the buttons for you after waiting for the timers to run out. People who contribute here need to add new specific code for each website after we find the vulnerabilities.
-- **Why is this called "debloated" when now it's a bigger script than the original one?** It only loads for the websites that are supposed to be bypassed, instead of loading for every site, so your pages are less bloated. Also the redirection to `sl1bas.blogspot.com`, a tracking site, is revmoed.
+- **Why is this called "debloated" when now it's a bigger script than the original one?** It only loads for the websites that are supposed to be bypassed, instead of loading for every site, so your pages are less bloated. Also the redirection to `sl1bas.blogspot.com`, a tracking site, is removed.
 - **What are *shortlinks*, where do I need this script if at all?** The type of *shortlinks* or *link shorteners* that we care about here are intermediate pages that users are forced to go through before getting to the page that we really want. They often force you to click ads so that the person posting these links can make a bit of money, 1 or 2 cents, each time somebody clicks them. This is used often in [piracy websites that offer direct downloads](https://fmhy.net/downloadpiracyguide#video-sites).
 - **How do I use the settings menu this script has?** I would leave all those settings on default, some can break some sites. When I see that one of those is useful for a site, I enable it for that site (even if it doesn't show on the menu). That menu was added by bloggerpemula, the original dev, and I simply left it there, but I don't use it myself.
 
@@ -37,7 +37,7 @@ Executing these python scripts in order:
 ## How to patch the original script yourself
 Paste the content of the files [include_rules.txt](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/src/branch/main/include_rules.txt) and [match_rules.txt](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/src/branch/main/match_rules.txt) in the ViolentMonkey settings for the [original script](https://greasyfork.org/scripts/431691), like this:
 
-![](https://i.imgur.com/qiJekvg.jpeg)
+<img src="https://i.imgur.com/qiJekvg.jpeg" height="500">
 
 This would not include the extra bypasses into the original script. But at least this makes it run only on the necessary sites, instead of running on every site.
 
@@ -46,7 +46,7 @@ This would not include the extra bypasses into the original script. But at least
 - **Added more bypasses and some fixes** through the scripts in the [extra_bypasses](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/src/branch/main/extra_bypasses) directory.
 - **No loading the script indiscriminately on every site.** The script will be loaded only for the sites that are supported (the original userscript is loaded in most of the sites you visit, which is not necessary). Also, by default the script won't run on some sites that have optional bypasses made, but are sensitive like YouTube or Google. These can be re-enabled manually in your userscript manager, adding [optional matching rules](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/src/branch/main/docs/optional_matching_rules.md) in the script _settings_.
 - **Removed non-latin non-unicode characters** to avoid potential bug warnings.
-- No added tracking redirects. The script will not redirect to `sl1bas.blogspot.com` which is a site set by the developer for tracking / collecting analytics and showing ads. Note: removing this could break "faucet" (crypto rewards) sites, according to Bloggerpemula, since they add a sometimes necessary delay. I don't try to support those sites with this fork.
+- No added tracking redirects. The script will not redirect to `sl1bas.blogspot.com` which is a site set by the developer for tracking / collecting analytics and showing ads. Note: removing this could break "faucet" (crypto rewards) sites, according to Bloggerpemula, since they add a sometimes necessary delay.
 - The script will not inject this weird _"adcopy_response"_. (I don't see a clear purpose for this, since it doesn't seem related in the script to any specific link shortener)
 
 BloggerPemula recently removed these tracking antifeatures in the original script too:
