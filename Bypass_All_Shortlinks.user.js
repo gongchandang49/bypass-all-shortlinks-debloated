@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4, gongchandang49
 // @noframes
-// @version    96.5-patch0.0.9
+// @version    96.5-patch0.1.0
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -14,7 +14,7 @@
 // @grant      window.onurlchange
 // @grant      GM_registerMenuCommand
 // @icon       https://cdn-icons-png.flaticon.com/512/14025/14025295.png
-// @require    https://update.greasyfork.org/scripts/528923/1599357/MonkeyConfig%20Mod.js
+// @require    https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/MonkeyConfig-Mod.js
 // @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
 // @homepageURL    https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated
 // @supportURL     https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/issues
@@ -567,9 +567,9 @@
 
 (function() {
 'use strict';
-  const ScInfo = "1. Support Me Via https://saweria.co/Bloggerpemula or Crypto(Check Homepage)\n2. Teal Features=> Sometimes Causes Problems , use Your own Trial Error\n3. Red Features=> I Turned Off the Feature until the Duplicate Script was Removed. (Read Script Info)";
+  
   const cfg = new MonkeyConfig({title: 'Bypass All Shortlinks Version 96.5 Settings',menuCommand: 'Open Bypass Settings',shadowWidth: '630px',shadowHeight: '450px',iframeWidth: '600px',iframeHeight: '400px',
-  params: {Announcements: {type: 'textarea',label: 'Announcements',fontColor: "#0000ff",default: ScInfo,column: 'top',labelAlign: 'center',rows: 5,cols: 50},
+  params: {
     BlogDelay: {label: 'Auto Delay in My Blog', type: 'checkbox', default: false,column: 'right&top'},
     SetDelay: {label: '=', type: 'number', default: 5,column: 'right&top', inputWidth: '40px'},
     TimerFC: {label: 'Enable Fast Timer', type: 'checkbox', fontColor: "#008080", default: false, column: 'left&top'},
@@ -578,7 +578,7 @@
     BlockFC: {label: 'Enable Always Ready',type: 'checkbox',fontColor: "#008080",default: false,column: 'left'},
     BlockPop: {label: 'Enable Popup Blocker',type: 'checkbox',fontColor: "#008080",default: false,column: 'left'},
     AntiDebug: {label: 'Enable Anti Debug & Log Cleared',type: 'checkbox',fontColor: "#008080",default: false,column: 'left'},
-    Audio: {label: 'Auto Solve Recaptcha Audio Mode',type: 'checkbox',fontColor: "#FF0000",default: false,column: 'left'},
+    Audio: {label: 'Auto Solve Recaptcha Audio Mode',type: 'checkbox',fontColor: "#008080",default: false,column: 'left'},
     YTShort: {label: 'Disable Youtube Short',type: 'checkbox',default: false,column: 'left&bottom', fontColor: "#008080"},
     Adblock: {label: 'Disable Adblock Detections',type: 'checkbox',default: false,column: 'right&bottom', fontColor: "#008080"},
     Prompt: {label: 'Disable Prompts & Notifications',type: 'checkbox',default: false,column: 'right&bottom', fontColor: "#008080"},

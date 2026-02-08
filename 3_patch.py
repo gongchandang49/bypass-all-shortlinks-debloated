@@ -142,12 +142,20 @@ def modify_script_extra(file_path, new_version):
 
             content = content.replace(toremove, '')
 
+            # gongchandang49 - replace menu with new version
+
+            content = content.replace("https://update.greasyfork.org/scripts/528923/1599357/MonkeyConfig%20Mod.js", "https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/MonkeyConfig-Mod.js")
+
+            content = content.replace("Recaptcha Audio Mode',type: 'checkbox',fontColor: \"#FF0000", "Recaptcha Audio Mode',type: 'checkbox',fontColor: \"#008080")
+
+            content = content.replace("Announcements: {type: 'textarea',label: 'Announcements',fontColor: \"#0000ff\",default: ScInfo,column: 'top',labelAlign: 'center',rows: 5,cols: 50},", '')
+            content = content.replace("const ScInfo = \"1. Support Me Via https://saweria.co/Bloggerpemula or Crypto(Check Homepage)\\n2. Teal Features=> Sometimes Causes Problems , use Your own Trial Error\\n3. Red Features=> I Turned Off the Feature until the Duplicate Script was Removed. (Read Script Info)\";", '')
 
             # Fixes
 
             # Change some default settings
             content = content.replace("'Auto Download For Supported Sites',type: 'checkbox',default: false,", "'Auto Download For Supported Sites',type: 'checkbox',default: true,")
-            content = content.replace("'Auto Solve Recaptcha Audio Mode',type: 'checkbox',default: false,", "'Auto Solve Recaptcha Audio Mode',type: 'checkbox',default: true,")
+            #content = content.replace("'Auto Solve Recaptcha Audio Mode',type: 'checkbox',default: false,", "'Auto Solve Recaptcha Audio Mode',type: 'checkbox',default: true,")
 
             ##content = content.replace("case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname))", "case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && !location.href.includes('/token/') && !location.href.includes('?r=') && !location.href.includes('?ref='))")
             ##content = content.replace("adbypass.org/bypass?bypass=' + location.href.split('?')[0]", "adbypass.org/bypass?bypass=' + encodeURIComponent(location.href)")

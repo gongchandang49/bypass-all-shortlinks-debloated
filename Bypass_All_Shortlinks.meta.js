@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4, gongchandang49
 // @noframes
-// @version    96.5-patch0.0.9
+// @version    96.5-patch0.1.0
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -14,7 +14,7 @@
 // @grant      window.onurlchange
 // @grant      GM_registerMenuCommand
 // @icon       https://cdn-icons-png.flaticon.com/512/14025/14025295.png
-// @require    https://update.greasyfork.org/scripts/528923/1599357/MonkeyConfig%20Mod.js
+// @require    https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/MonkeyConfig-Mod.js
 // @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
 // @homepageURL    https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated
 // @supportURL     https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/issues
