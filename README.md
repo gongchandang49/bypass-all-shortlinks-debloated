@@ -3,8 +3,7 @@
 
 A fork of *Bypass All Shortlinks* (originally by *bloggerpemula*), with some additional bypasses and fixes.
 
-## Install
-**Install with [this link](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)**
+## Install with [this link](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)
 
 > To avoid potential issues, please remember to disable Amm0ni4's version in case you have it installed.
 
