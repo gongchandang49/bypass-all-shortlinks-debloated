@@ -4,7 +4,7 @@
 // @run-at     document-start
 // @author     Amm0ni4, gongchandang49
 // @noframes
-// @version    96.5-patch0.1.3
+// @version    96.5-patch0.1.4
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -203,7 +203,7 @@
 // @include /^(https?:\/\/)(.+)?(offerwall.me|ewall.biz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(surl.li|surl.gd)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(dogefury.com|thanks.tinygo.co)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((blogsward|coinjest).com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((blogsward|coinjest).com|coinsimulator.(io|online))(\/.*)/
 // @include /^(https?:\/\/)(.+)?(michaelemad.com|7misr4day.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((dramaticqueen|emubliss).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((grtjobs|jksb).in)(\/.*)/
@@ -235,7 +235,7 @@
 // @include /^(https?:\/\/)(.+)?(solidcoins.net|fishingbreeze.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((superheromaniac|spatsify|mastkhabre|ukrupdate).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((bestloansoffers|worldzc).com|earningtime.in)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((exeo|exego).app|(falpus|exe-urls|exnion).com|4ace.online)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((exeo|exego).app|(falpus|exe-urls|exnion|exe-links).com|4ace.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(writedroid.eu.org|modmania.eu.org|writedroid.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(techkhulasha.com|itijobalert.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((lakhisarainews|vahanmitra24).in)(\/.*)/

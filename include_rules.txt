@@ -10,7 +10,7 @@
 /^(https?:\/\/)(.+)?(offerwall.me|ewall.biz)(\/.*)/
 /^(https?:\/\/)(.+)?(surl.li|surl.gd)(\/.*)/
 /^(https?:\/\/)(.+)?(dogefury.com|thanks.tinygo.co)(\/.*)/
-/^(https?:\/\/)(.+)?((blogsward|coinjest).com)(\/.*)/
+/^(https?:\/\/)(.+)?((blogsward|coinjest).com|coinsimulator.(io|online))(\/.*)/
 /^(https?:\/\/)(.+)?(michaelemad.com|7misr4day.com)(\/.*)/
 /^(https?:\/\/)(.+)?((dramaticqueen|emubliss).com)(\/.*)/
 /^(https?:\/\/)(.+)?((grtjobs|jksb).in)(\/.*)/
@@ -42,7 +42,7 @@
 /^(https?:\/\/)(.+)?(solidcoins.net|fishingbreeze.com)(\/.*)/
 /^(https?:\/\/)(.+)?((superheromaniac|spatsify|mastkhabre|ukrupdate).com)(\/.*)/
 /^(https?:\/\/)(.+)?((bestloansoffers|worldzc).com|earningtime.in)(\/.*)/
-/^(https?:\/\/)(.+)?((exeo|exego).app|(falpus|exe-urls|exnion).com|4ace.online)(\/.*)/
+/^(https?:\/\/)(.+)?((exeo|exego).app|(falpus|exe-urls|exnion|exe-links).com|4ace.online)(\/.*)/
 /^(https?:\/\/)(.+)?(writedroid.eu.org|modmania.eu.org|writedroid.in)(\/.*)/
 /^(https?:\/\/)(.+)?(techkhulasha.com|itijobalert.in)(\/.*)/
 /^(https?:\/\/)(.+)?((lakhisarainews|vahanmitra24).in)(\/.*)/

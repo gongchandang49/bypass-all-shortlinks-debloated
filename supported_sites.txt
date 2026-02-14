@@ -181,7 +181,7 @@ earnbee.xyz|zippynest.online|getunic.info
 offerwall.me|ewall.biz
 surl.li|surl.gd
 dogefury.com|thanks.tinygo.co
-(blogsward|coinjest).com
+(blogsward|coinjest).com|coinsimulator.(io|online)
 michaelemad.com|7misr4day.com
 (dramaticqueen|emubliss).com
 (grtjobs|jksb).in
@@ -213,7 +213,7 @@ coincroco.com|surflink.tech|cointox.net
 solidcoins.net|fishingbreeze.com
 (superheromaniac|spatsify|mastkhabre|ukrupdate).com
 (bestloansoffers|worldzc).com|earningtime.in
-(exeo|exego).app|(falpus|exe-urls|exnion).com|4ace.online
+(exeo|exego).app|(falpus|exe-urls|exnion|exe-links).com|4ace.online
 writedroid.eu.org|modmania.eu.org|writedroid.in
 techkhulasha.com|itijobalert.in
 (lakhisarainews|vahanmitra24).in
