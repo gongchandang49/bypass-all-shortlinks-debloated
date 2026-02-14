@@ -230,6 +230,9 @@ def modify_file_with_my_fixes(input_file, output_file):
     # p0008874 - gcd49/pulls/35 - exe.io fix
     content = content.replace("(exeo|exego).app|(falpus|exe-urls|exnion).com|4ace.online", "(exeo|exego).app|(falpus|exe-urls|exnion|exe-links).com|4ace.online")
 
+    # gongchandang49 - issues/13 - new gplinks domains
+    content = content.replace("mangareleasedate|sabkiyojana|teqwit|bulkpit|odiafm).com|(loopmyhub|thepopxp).shop|cryptoblast.online", "mangareleasedate|sabkiyojana|teqwit|bulkpit|odiafm|qrixpe).com|(loopmyhub|thepopxp).shop|(cryptoblast|powergam).online")
+
     if not content.endswith("\n"):
         content += "\n"
 
