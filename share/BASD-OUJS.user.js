@@ -14,7 +14,7 @@
 // @grant      GM_xmlhttpRequest
 // @grant      window.onurlchange
 // @grant      GM_registerMenuCommand
-// @icon       https://cdn-icons-png.flaticon.com/512/14025/14025295.png
+// @icon       https://cdn-icons-png.flaticon.com/256/14025/14025295.png
 // @require    https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/MonkeyConfig-Mod.js
 // @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
 // @homepageURL    https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated

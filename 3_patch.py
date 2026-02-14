@@ -266,6 +266,9 @@ def modify_script_OUJS(file_path, output_file_path):
             # updateURL
             content = content.replace("https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js", "https://openuserjs.org/meta/gongchandang49/Bypass_All_Shortlinks_Debloated.meta.js")
             
+            # icon size smfh
+            content = content.replace("https://cdn-icons-png.flaticon.com/512/14025/14025295.png", "https://cdn-icons-png.flaticon.com/256/14025/14025295.png")
+
             if not content.endswith('\n'):
                 content += '\n'
 
