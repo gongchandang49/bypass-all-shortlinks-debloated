@@ -154,7 +154,7 @@ def modify_script_extra(file_path, new_version):
             # Fixes
 
             # Change some default settings
-            content = content.replace("'Auto Download For Supported Sites',type: 'checkbox',default: false,", "'Auto Download For Supported Sites',type: 'checkbox',default: true,")
+            #content = content.replace("'Auto Download For Supported Sites',type: 'checkbox',default: false,", "'Auto Download For Supported Sites',type: 'checkbox',default: true,")
             #content = content.replace("'Auto Solve Recaptcha Audio Mode',type: 'checkbox',default: false,", "'Auto Solve Recaptcha Audio Mode',type: 'checkbox',default: true,")
 
             ##content = content.replace("case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname))", "case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && !location.href.includes('/token/') && !location.href.includes('?r=') && !location.href.includes('?ref='))")
