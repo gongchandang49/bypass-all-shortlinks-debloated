@@ -3,8 +3,9 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4, gongchandang49
+// @license    Unlicense
 // @noframes
-// @version    96.5-patch0.1.6
+// @version    96.5-patch0.1.7
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
