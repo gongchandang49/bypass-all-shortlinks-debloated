@@ -312,7 +312,7 @@ def main():
     modify_script(input_script_path, includes_file_path, output_script_path)
     modify_script_extra(output_script_path, new_version)
     generate_metadata_file("Bypass_All_Shortlinks.user.js", "Bypass_All_Shortlinks.meta.js")
-    modify_script_OUJS("Bypass_All_Shortlinks.user.js", "share/BASD-OUJS.js")
+    modify_script_OUJS("Bypass_All_Shortlinks.user.js", "share/BASD-OUJS.user.js")
 
 if __name__ == "__main__":
     main()
