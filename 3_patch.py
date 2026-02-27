@@ -128,6 +128,9 @@ def modify_script_extra(file_path, new_version):
             content = content.replace("Please Wait in @ Seconds , Tell Amm0ni4 to Delete His Debloated if You Want My Script to be Updated Regularly , Thanks", "")
             content = content.replace("", "")
 
+            content = content.replace("Bypassed by Bloggerpemula", "Shortlink Bypassed")
+            content = content.replace("Thanks for using Bypass All Shortlinks Scripts and for Donations , Regards : Bloggerpemula", "Bypass All Shortlinks Debloated")
+
             #Change source URL
             content = content.replace("https://update.greasyfork.org/scripts/431691/Bypass%20All%20Shortlinks.user.js",
                                       "https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js")
@@ -255,34 +258,6 @@ def modify_script_extra(file_path, new_version):
         print(f"An error occurred: {e}")
 
 
-def modify_script_OUJS(file_path, output_file_path):
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            content = file.read()
-
-            content = content.replace("Unlicense", "0BSD")
-            # downloadURL
-            content = content.replace("https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js", "https://openuserjs.org/install/gongchandang49/Bypass_All_Shortlinks_Debloated.user.js")
-            # updateURL
-            content = content.replace("https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js", "https://openuserjs.org/meta/gongchandang49/Bypass_All_Shortlinks_Debloated.meta.js")
-            
-            # icon size smfh
-            content = content.replace("https://cdn-icons-png.flaticon.com/512/14025/14025295.png", "https://cdn-icons-png.flaticon.com/256/14025/14025295.png")
-
-            if not content.endswith('\n'):
-                content += '\n'
-
-        with open(output_file_path, 'w', encoding='utf-8') as file:
-            file.write(content)
-
-        print("OUJS version exported successfully.")
-
-    except FileNotFoundError:
-        print(f"File '{file_path}' not found.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
-
-
 def generate_metadata_file(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -315,7 +290,6 @@ def main():
     modify_script(input_script_path, includes_file_path, output_script_path)
     modify_script_extra(output_script_path, new_version)
     generate_metadata_file("Bypass_All_Shortlinks.user.js", "Bypass_All_Shortlinks.meta.js")
-    modify_script_OUJS("Bypass_All_Shortlinks.user.js", "share/BASD-OUJS.user.js")
 
 if __name__ == "__main__":
     main()

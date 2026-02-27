@@ -92,6 +92,34 @@ def process_js_files(folder_path, target_file):
         for line in cleaned_lines:
             f.write(line + '\n')
 
+def modify_script_OUJS(file_path, output_file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
+
+            content = content.replace("Unlicense", "0BSD")
+            # downloadURL
+            content = content.replace("https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js", "https://openuserjs.org/install/gongchandang49/Bypass_All_Shortlinks_Debloated.user.js")
+            # updateURL
+            content = content.replace("https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js", "https://openuserjs.org/meta/gongchandang49/Bypass_All_Shortlinks_Debloated.meta.js")
+            
+            # icon size smfh
+            content = content.replace("https://cdn-icons-png.flaticon.com/512/14025/14025295.png", "https://cdn-icons-png.flaticon.com/256/14025/14025295.png")
+
+            if not content.endswith('\n'):
+                content += '\n'
+
+        with open(output_file_path, 'w', encoding='utf-8') as file:
+            file.write(content)
+
+        print("OUJS version exported successfully.")
+
+    except FileNotFoundError:
+        print(f"File '{file_path}' not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
 # Main function to execute the process
 def main():
     fixes_folder = "./extra_bypasses"
@@ -99,6 +127,7 @@ def main():
     process_js_files(fixes_folder, target_file)
     print("Modification complete.")
     generate_metadata_file("Bypass_All_Shortlinks.user.js", "Bypass_All_Shortlinks.meta.js")
+    modify_script_OUJS("Bypass_All_Shortlinks.user.js", "share/BASD-OUJS.user.js")
 
 if __name__ == "__main__":
     main()
