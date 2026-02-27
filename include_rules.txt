@@ -42,7 +42,7 @@
 /^(https?:\/\/)(.+)?(solidcoins.net|fishingbreeze.com)(\/.*)/
 /^(https?:\/\/)(.+)?((superheromaniac|spatsify|mastkhabre|ukrupdate).com)(\/.*)/
 /^(https?:\/\/)(.+)?((bestloansoffers|worldzc).com|earningtime.in)(\/.*)/
-/^(https?:\/\/)(.+)?((exeo|exego).app|(falpus|exe-urls|exnion|exe-links).com|4ace.online)(\/.*)/
+/^(https?:\/\/)(.+)?((exeo|exego).app|(falpus|exe-urls|exnion|exe-links|exeygo).com|4ace.online)(\/.*)/
 /^(https?:\/\/)(.+)?(writedroid.eu.org|modmania.eu.org|writedroid.in)(\/.*)/
 /^(https?:\/\/)(.+)?(techkhulasha.com|itijobalert.in)(\/.*)/
 /^(https?:\/\/)(.+)?((lakhisarainews|vahanmitra24).in)(\/.*)/
