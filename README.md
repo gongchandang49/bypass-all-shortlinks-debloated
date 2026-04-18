@@ -66,6 +66,7 @@ Thanks to:
 - [moviezapiya.fun](https://moviezapiya.fun/) used for PSA links.
 - [Rust1667](https://greasyfork.org/users/980489-rust1667) for some bypasses.
 - [AdamWr](https://github.com/AdamWr) from AdGuard for the mega-enlace and acortalink.me bypasses.
+- @cyan-n1d3 for the psa.wf bypass.
 - Every user that has reported issues to this repository.
 
 ## Optional extra tools

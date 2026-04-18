@@ -1,4 +1,4 @@
-import os
+import os, requests
 
 def generate_metadata_file(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as f:
@@ -120,8 +120,29 @@ def modify_script_OUJS(file_path, output_file_path):
         print(f"An error occurred: {e}")
 
 
-# Main function to execute the process
+def download_psa_bypass():
+    url = "https://codeberg.org/cyan-n1d3/PSAbypass/raw/branch/main/psa.wf-bypass.js"
+    output_file = "extra_bypasses/psa-wf.user.js"
+    headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36' }
+    
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        with open(output_file, 'wb') as f:
+            f.write(response.content)
+        print(f"Downloaded psa-wf.user.js")
+        return True
+        
+    except requests.exceptions.RequestException as e:
+        print(f"Error downloading file: {e}")
+        return False
+    except IOError as e:
+        print(f"Error writing file: {e}")
+        return False
+
+
 def main():
+    download_psa_bypass()
     fixes_folder = "./extra_bypasses"
     target_file = "Bypass_All_Shortlinks.user.js"
     process_js_files(fixes_folder, target_file)
