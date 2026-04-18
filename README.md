@@ -5,7 +5,7 @@ A fork of *Bypass All Shortlinks* (originally by *bloggerpemula*), with some add
 
 ([supported shorteners](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/src/branch/main/supported_sites.txt)) ([changelog](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/commits/branch/main/Bypass_All_Shortlinks.user.js))
 
-## Install from [OpenUserJS](https://openuserjs.org/install/gongchandang49/Bypass_All_Shortlinks_Debloated.user.js) / [Github](https://github.com/gongchandang49/bypass-all-shortlinks-debloated/raw/refs/heads/main/Bypass_All_Shortlinks.user.js) / [Codeberg](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)
+## Install from [OpenUserJS](https://openuserjs.org/install/gongchandang49/Bypass_All_Shortlinks_Debloated.user.js) / [Github](https://github.com/gongchandang49/bypass-all-shortlinks-debloated/raw/refs/heads/main/Bypass_All_Shortlinks.user.js) / [Codeberg (recommended)](https://codeberg.org/gongchandang49/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js)
 
 > To avoid potential issues, please remember to disable Amm0ni4/BloggerPemula's version in case you have it installed.
 
