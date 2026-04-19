@@ -142,7 +142,7 @@ def download_psa_bypass():
 
 
 def main():
-    download_psa_bypass()
+    #download_psa_bypass()
     fixes_folder = "./extra_bypasses"
     target_file = "Bypass_All_Shortlinks.user.js"
     process_js_files(fixes_folder, target_file)

@@ -5,7 +5,7 @@
 // @author     Amm0ni4, gongchandang49
 // @license    Unlicense
 // @noframes
-// @version    96.5-patch0.1.9
+// @version    96.5-patch0.2.0
 // @grant      GM_setValue
 // @grant      GM_getValue
 // @grant      GM_addStyle
@@ -316,7 +316,7 @@
 // @include     /(cybercityhelp|akcartoons).in/
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
-// @include     /shrinkme.(us|site|cc|vip|dev|ink|click)/
+// @include     /shrinkme.(us|site|cc|vip|dev|ink|click|io)/
 // @include     /test.shrinkurl.org/
 // @include     /shareus.io/
 // @include     /shareus\.io\/go\?sid=/
@@ -555,6 +555,7 @@
 // @include     /link.paid4link.com/
 // @include     /smallshorts.com/
 // @include     /(kingshort|jobsvb|ffindia|joblicense).in|(oreoauto|theglobaldiary.com)|shopizo.fun|(mtc1|mtc2|mtc3)/
+// @include     /cryptoinsights.site|gadgetsweb.xyz|greenmountmotors.com/
 // @include /^(https?:\/\/)(.+)?((actualpost|americanstylo|beautifulfashionnailart|dadinthemaking|glowandglamcorner|listofthis|lobirtech|travelperi|vepiv|seydisehirmansethaber|turkiyertg|tophotelsukraine|balatroltd|tenorminiuk|icryptowin|chronoat|ecoinfotec|bcsclass|mainitbd|newselab|dizok|uzaay|tophistoryview|9sblog|ubnem|techavash|6harfli|professionaley|playghub|apkvmod|apkallworld|techoflix|toplistee|games2mobile|nivtu|bflig|jplna|bilgilendirici|zoninews|smoplay|m-womenstyle|bnirfinance|fuyde|infoguidebd|worthtester|4kphotoediting|befinja).com|(makego|sakazi|momge|englishgrammarpro|arab-plus).net|askerlikforum.com.tr|misterio.ro|(forp|bevery|fanuze|twogamehup|muskokay|zingif).xyz|gamcabd.org|gamerking.shop|nidbd.me)(\/.*)/
 // @include     /^(https?:\/\/)(.+)?((mega-enlace|acortados).com|tulink.org)/
 // @include     /^https:\/\/(.*\.|)(playonpc.online|(quins|megahosting).us|(tradeshowrating|historyofyesterday|retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|ngebike).com|gally.shop|(qanin|ivnlnews|jobvox|gfcg).xyz|evegor.net|freeat30.org|droplink.co)\/.*/
@@ -1647,7 +1648,7 @@
     /techtnet.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#originalLink')}) : null;
 
     //shrinkme.us
-    /shrinkme.(us|site|cc|vip|dev|ink|click)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    /shrinkme.(us|site|cc|vip|dev|ink|click|io)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
 
     // /travelkuku.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn2')}) : null;
 
@@ -2922,6 +2923,13 @@
     }) : null;
     /vplink.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null;
 
+    // gcd49 #53 -- 4kHDhub
+    /cryptoinsights.site|gadgetsweb.xyz|greenmountmotors.com/.test(url) ? afterDOMLoaded(function() {
+        String.prototype.rot13=function(){return this.replace(/[a-zA-Z]/g,function(c){let code=c.charCodeAt(0),isUpper=c<='Z',base=isUpper?90:122;return code+=13,code>base&&(code-=26),String.fromCharCode(code)})};
+        try{let oValue=localStorage.getItem('o');if(oValue){const parsed=JSON.parse(oValue);oValue=parsed.value;oValue=atob(atob(atob(oValue)).rot13());oValue=atob(JSON.parse(oValue).o);window.location.assign(oValue)}}catch(e){}
+    }) : null;
+
+
     // Timer boost list
     const urlPatternsForTimerBoost = [
         /www.gtaall.com\/get-manual/, // gtaall.com - https://github.com/FastForwardTeam/FastForward/issues/1348
@@ -3645,79 +3653,7 @@ function redirectWithMessage(url) {
     return;
   }
 
-  //== exe.io
-  if (/exe\.io|exe-links\.com|exeygo\.com/.test(host)) {
-    say('exe');
-    window.open = () => { };
-    const OSI = setInterval;
-    window.setInterval = (f, t, ...a) => OSI(f, t === 1e3 ? 100 : t, ...a);
 
-    hXHR((r, b, u, h) => {
-      if (r.url) location.href = r.url;
-      else if (r.message) fetch(u, { method: 'POST', headers: { ...h, 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }, body: b })
-        .then(x => x.json()).then(d => d.url && (location.href = d.url));
-    }, '/links/go');
-
-    wBtn('#before-captcha .button, button.link-button', b => b.innerText.includes('Continue') && b.click());
-    wBtn('#invisibleCaptchaShortlink', b => b.click());
-    wBtn('#g-recaptcha-response', c => {
-      if (c.value.length > 20) { (document.getElementById('link-view') || document.forms[0]).submit(); return true; }
-      sUI('Solve captcha manual');
-      return false;
-    });
-    return;
-  }
-
-  // recaptcha
-  if (/google\.com|recaptcha\.net/.test(host)) {
-    setInterval(() => {
-      const b = document.querySelector('.recaptcha-checkbox-border');
-      if (b && !b.classList.contains('recaptcha-checkbox-checked')) b.click();
-    }, 1000);
-    return;
-  }
-
-  //== shortxlinks (seems removed from psa)
-  if (/mtc\d/.test(host)) {
-    let check = setInterval(() => {
-      const d = s => { try { return JSON.parse(atob(s)); } catch (e) { } };
-      const p = new URLSearchParams(location.search).get('safelink_redirect');
-
-      if (p) {
-        const res = d(p);
-        if (res && res.safelink) { clearInterval(check); location.href = res.safelink; }
-      } else {
-        const e = document.getElementById('value') || document.querySelector('input[name="newwpsafelink"]');
-        const v = e ? e.value : window.ad_mem;
-        if (v && document.body) {
-          clearInterval(check);
-          const j = d(v);
-          if (j && j.linkr) {
-            let u = j.linkr, t = (parseInt(j.delay) || 25) + 2;
-            try { u = d(new URL(u).searchParams.get('safelink_redirect')).safelink || u; } catch (e) { }
-            let i = setInterval(() => {
-              sUI(`Redirecting in ${t--}s...`);
-              if (t < 0) { clearInterval(i); location.href = u; }
-            }, 1000);
-          }
-        }
-      }
-    }, 500);
-    return;
-  }
-
-  if (host.includes('shortxlinks')) hXHR(r => r.url && (location.href = r.url), '/links/go');
-
-  //== shrinkme
-  // shrinkme
-  if (/shrinkme\.click/.test(host)) {
-    say('shrinkme');
-    const t = setInterval(() => {
-      const v = document.getElementById('div-human-verification');
-      if (v && v.dataset.link) { clearInterval(t); location.href = 'https://themezon.net/link.php?link=' + v.dataset.link; }
-    }, 500);
-    return;
-  }
 
   // themezon
   if (/themezon\.net/.test(host)) {
@@ -3744,7 +3680,6 @@ function redirectWithMessage(url) {
     say('mrproblogger');
     hXHR(r => r.url && (location.href = r.url), '/links/go');
     wBtn('a.get-link, #btn-get-link, #get-link-btn, button#go-submit', b => b.click(), 1000);
-    sUI('WAIT FOR COUNTDOWN');
     return;
   }
 
@@ -3765,27 +3700,6 @@ function redirectWithMessage(url) {
       const f12 = document.getElementById('form12');
       if (f12) { clearInterval(t); fetch('https://fc.lc/links/go', { method: 'POST', body: new FormData(f12) }).then(r => r.json()).then(d => d.url && (location.href = d.url)); }
     }, 500);
-    return;
-  }
-
-  //== shrtslug and others
-  // shrtslug / digiztechno / tournguide / techmize / technons / biovetro / dailyjobposting
-  if (/shrtslug|digiztechno|tournguide|techmize|technons|yrtourguide|biovetro|dailyjobposting/.test(host)) {
-    say('shrtslug');
-    let s = document.createElement('style');
-    s.innerHTML = '#warning_area{display:none!important}#main_area{display:block!important}';
-    document.head.appendChild(s);
-    try { Object.defineProperty(window, 'abwn', { value: () => { }, writable: false }); } catch (e) { }
-    new MutationObserver(m => m.forEach(n => { if (n.addedNodes[0]?.id === 'main_area') n.addedNodes[0].remove = () => { }; })).observe(document, { childList: true, subtree: true });
-
-    const t = setInterval(() => {
-      let f = document.querySelector('div[id$="_final"] a, div[id$="_final"] button');
-      if (f && f.offsetParent) { clearInterval(t); f.click(); return; }
-
-      document.querySelectorAll('button, a.btn, input[type="submit"]').forEach(b => {
-        if (b.offsetParent && !b.disabled && /verify|proceed|get link|open|begin|start/i.test(b.innerText || b.value)) b.click();
-      });
-    }, 1000);
     return;
   }
 

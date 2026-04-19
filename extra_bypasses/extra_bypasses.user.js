@@ -11,7 +11,7 @@
 // @include     /(cybercityhelp|akcartoons).in/
 // @include     /www.akcartoons.in/
 // @include     /go.moonlinks.in/
-// @include     /shrinkme.(us|site|cc|vip|dev|ink|click)/
+// @include     /shrinkme.(us|site|cc|vip|dev|ink|click|io)/
 // @include     /test.shrinkurl.org/
 // @include     /shareus.io/
 // @include     /shareus\.io\/go\?sid=/
@@ -254,6 +254,7 @@
 // @include     /link.paid4link.com/
 // @include     /smallshorts.com/
 // @include     /(kingshort|jobsvb|ffindia|joblicense).in|(oreoauto|theglobaldiary.com)|shopizo.fun|(mtc1|mtc2|mtc3)/
+// @include     /cryptoinsights.site|gadgetsweb.xyz|greenmountmotors.com/
 // @run-at      document-start
 // ==/UserScript==
 
@@ -519,7 +520,7 @@
     /techtnet.com/.test(url) ? afterDOMLoaded(function() {redirectIfExists('#originalLink')}) : null;
 
     //shrinkme.us
-    /shrinkme.(us|site|cc|vip|dev|ink|click)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
+    /shrinkme.(us|site|cc|vip|dev|ink|click|io)/.test(url) ? afterDOMLoaded(function() {clickIfNotDisabled('#invisibleCaptchaShortlink')}) : null;
 
     // /travelkuku.com/.test(url) ? afterDOMLoaded(function() {clickIfExists('#btn2')}) : null;
 
@@ -1793,6 +1794,13 @@
         clickIfExists('#btn7');
     }) : null;
     /vplink.in/.test(url) ? afterDOMLoaded(function() {redirectIfNotDisabled('a.get-link');}) : null;
+
+    // gcd49 #53 -- 4kHDhub
+    /cryptoinsights.site|gadgetsweb.xyz|greenmountmotors.com/.test(url) ? afterDOMLoaded(function() {
+        String.prototype.rot13=function(){return this.replace(/[a-zA-Z]/g,function(c){let code=c.charCodeAt(0),isUpper=c<='Z',base=isUpper?90:122;return code+=13,code>base&&(code-=26),String.fromCharCode(code)})};
+        try{let oValue=localStorage.getItem('o');if(oValue){const parsed=JSON.parse(oValue);oValue=parsed.value;oValue=atob(atob(atob(oValue)).rot13());oValue=atob(JSON.parse(oValue).o);window.location.assign(oValue)}}catch(e){}
+    }) : null;
+
 
     // Timer boost list
     const urlPatternsForTimerBoost = [
